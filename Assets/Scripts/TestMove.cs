@@ -444,23 +444,8 @@ public class TestMove : MonoBehaviour
             rotateToZero = false;
             changeRotateDir = true;
         }
-        //Leaving Wall
-        else if (direction != Vector3.zero && detectFloor == true && onWall)
-        {
-            onWall = false;
-            canMove = false;
-            playerRotation.enabled = false;
-            rotTimer = 0.0f;
-            oldRot = transform.rotation;
-
-            RotateDirection();
-
-            rotate = true;
-            direction = Vector3.zero;
-
-        }
         //Mounting wall
-        else if (direction != Vector3.zero && raycastDetection.InShadow == true && !onWall && !downDetect)
+        else if (direction != Vector3.zero && raycastDetection.InShadow == true && !downDetect)
         {
             fallOff = false;
             canMove = false;
@@ -493,6 +478,22 @@ public class TestMove : MonoBehaviour
             rotate = true;
             direction = Vector3.zero;
         }
+        //Leaving Wall
+        else if (direction != Vector3.zero && detectFloor == true && onWall)
+        {
+            onWall = false;
+            canMove = false;
+            playerRotation.enabled = false;
+            rotTimer = 0.0f;
+            oldRot = transform.rotation;
+
+            RotateDirection();
+
+            rotate = true;
+            direction = Vector3.zero;
+
+        }
+        
 
         if (rotate == true)
         {
