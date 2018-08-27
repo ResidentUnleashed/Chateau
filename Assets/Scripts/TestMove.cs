@@ -41,7 +41,6 @@ public class TestMove : MonoBehaviour
     private Rigidbody rb;
     private PlayerRotation playerRotation;
     private RaycastDetection raycastDetection;
-    private GravityBody gravityBody;
     private GameObject anch;
     private Animator animator;
     private int anchorCount = 0;
@@ -120,8 +119,6 @@ public class TestMove : MonoBehaviour
         raycastDetection = GetComponent<RaycastDetection>();
         animator = GetComponent<Animator>();
         respawnPos = transform.position;
-        gravityBody = GetComponent<GravityBody>();
-        gravityBody.enabled = false;
     }
 
     void Update()
@@ -261,9 +258,9 @@ public class TestMove : MonoBehaviour
             FallOffWall();
         }
 
-        FallOutOfShadow();
-
         DetachOffWall();
+
+        FallOutOfShadow();
     }
 
     private void DetectWalls()
@@ -443,14 +440,12 @@ public class TestMove : MonoBehaviour
 
     private void RotatePlayer()
     {
-
         //Mounting wall from down raycast
         if (Input.GetButtonDown("Fire1") && !onWall && downDetect && raycastDetection.InShadow == true)
         {
             onWall = true;
             fallOff = false;
             startAttachTimer = true;
-            gravityBody.enabled = true;
             rotateToZero = false;
             changeRotateDir = true;
         }
