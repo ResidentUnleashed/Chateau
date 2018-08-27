@@ -131,11 +131,6 @@ public class TestMove : MonoBehaviour
             anchorCount++;
         }
 
-        if (!rotate || !rotateToZero)
-        {
-            gravityBody.enabled = false;
-        }
-
         if (onWall)
         {
             //Do not use gravity
@@ -450,7 +445,7 @@ public class TestMove : MonoBehaviour
             changeRotateDir = true;
         }
         //Leaving Wall
-        else if (direction != Vector3.zero && detectFloor == true)
+        else if (direction != Vector3.zero && detectFloor == true && onWall)
         {
             onWall = false;
             canMove = false;
@@ -465,7 +460,7 @@ public class TestMove : MonoBehaviour
 
         }
         //Mounting wall
-        else if (direction != Vector3.zero && raycastDetection.InShadow == true)
+        else if (direction != Vector3.zero && raycastDetection.InShadow == true && !onWall && !downDetect)
         {
             fallOff = false;
             canMove = false;
