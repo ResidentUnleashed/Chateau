@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private PlayerRotation playerRotation;
     private RaycastDetection raycastDetection;
+    private ChangeForm changeForm;
     private GameObject anch;
     private Animator animator;
     private int anchorCount = 0;
@@ -109,6 +110,11 @@ public class PlayerMovement : MonoBehaviour
         get { return respawnPos; }
         set { respawnPos = value; }
     }
+
+    public bool OnWall
+    {
+        get { return onWall; ; }
+    }
     #endregion
 
     void Awake()
@@ -118,8 +124,8 @@ public class PlayerMovement : MonoBehaviour
         playerRotation = GetComponent<PlayerRotation>();
         raycastDetection = GetComponent<RaycastDetection>();
         animator = GetComponent<Animator>();
+        changeForm = GetComponent<ChangeForm>();
         respawnPos = transform.position;
-
     }
 
     void Update()
@@ -245,7 +251,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Rotation across walls
         RotatePlayer();
-
+        
         //Rotate when you're back on the ground
         RotateBack();
 
@@ -436,85 +442,87 @@ public class PlayerMovement : MonoBehaviour
 
     private void RotatePlayer()
     {
-
-        //Mounting wall from down raycast
-        if (Input.GetButtonDown("Fire1") && !onWall && downDetect && raycastDetection.InShadow == true)
+        if(changeForm.IsLittle)
         {
-            onWall = true;
-            fallOff = false;
-            startAttachTimer = true;
-            rotateToZero = false;
-            changeRotateDir = true;
-        }
-        //Leaving Wall
-        else if (Input.GetButtonDown("Fire1") && direction != Vector3.zero && detectFloor == true)
-        {
-            onWall = false;
-            canMove = false;
-            playerRotation.enabled = false;
-            rotTimer = 0.0f;
-            oldRot = transform.rotation;
-
-            RotateDirection();
-
-            rotate = true;
-            direction = Vector3.zero;
-
-        }
-        //Mounting wall
-        else if (Input.GetButtonDown("Fire1") && direction != Vector3.zero && raycastDetection.InShadow == true)
-        {
-            fallOff = false;
-            canMove = false;
-            onWall = true;
-            playerRotation.enabled = false;
-            rotTimer = 0.0f;
-            oldRot = transform.rotation;
-
-            RotateDirection();
-
-            #region Old Detect
-            //Looking into wall
-            //if (Vector3.Dot(transform.forward, direction) < -0.95f)
-            //{
-            //    targetRot = Quaternion.LookRotation(Vector3.up, direction);
-            //}
-            ////Looking Away From Wall
-            //else if (Vector3.Dot(transform.forward, direction) > 0.95f)
-            //{
-            //    targetRot = Quaternion.LookRotation(Vector3.down, direction);
-            //}
-            ////Looking Across the wall
-            //else if (Vector3.Dot(transform.forward, direction) < 0.05f &&
-            //    Vector3.Dot(transform.forward, direction) > -0.05f)
-            //{
-            //    targetRot = Quaternion.LookRotation(transform.forward, direction);
-            //}
-            #endregion
-
-            rotate = true;
-            direction = Vector3.zero;
-        }
-
-
-        if (rotate == true)
-        {
-            rotTimer += Time.deltaTime;
-
-            if (transform.rotation != targetRot) /* Does not equal our target rotation */
+            //Mounting wall from down raycast
+            if (Input.GetButtonDown("Fire1") && !onWall && downDetect && raycastDetection.InShadow == true)
             {
-                //Slerp towards rotation
-                transform.rotation = Quaternion.Slerp(oldRot, targetRot, rotTimer * rotSpeed);
+                onWall = true;
+                fallOff = false;
+                startAttachTimer = true;
+                rotateToZero = false;
+                changeRotateDir = true;
             }
-        }
+            //Leaving Wall
+            else if (Input.GetButtonDown("Fire1") && direction != Vector3.zero && detectFloor == true)
+            {
+                onWall = false;
+                canMove = false;
+                playerRotation.enabled = false;
+                rotTimer = 0.0f;
+                oldRot = transform.rotation;
 
-        if (rotTimer > rotateTime)
-        {
-            //Reset
-            rotate = false;
-            transform.rotation = targetRot;
-            changeRotateDir = true;
-            rotTimer = 0.0f;
+                RotateDirection();
+
+                rotate = true;
+                direction = Vector3.zero;
+
+            }
+            //Mounting wall
+            else if (Input.GetButtonDown("Fire1") && direction != Vector3.zero && raycastDetection.InShadow == true)
+            {
+                fallOff = false;
+                canMove = false;
+                onWall = true;
+                playerRotation.enabled = false;
+                rotTimer = 0.0f;
+                oldRot = transform.rotation;
+
+                RotateDirection();
+
+                #region Old Detect
+                //Looking into wall
+                //if (Vector3.Dot(transform.forward, direction) < -0.95f)
+                //{
+                //    targetRot = Quaternion.LookRotation(Vector3.up, direction);
+                //}
+                ////Looking Away From Wall
+                //else if (Vector3.Dot(transform.forward, direction) > 0.95f)
+                //{
+                //    targetRot = Quaternion.LookRotation(Vector3.down, direction);
+                //}
+                ////Looking Across the wall
+                //else if (Vector3.Dot(transform.forward, direction) < 0.05f &&
+                //    Vector3.Dot(transform.forward, direction) > -0.05f)
+                //{
+                //    targetRot = Quaternion.LookRotation(transform.forward, direction);
+                //}
+                #endregion
+
+                rotate = true;
+                direction = Vector3.zero;
+            }
+
+
+            if (rotate == true)
+            {
+                rotTimer += Time.deltaTime;
+
+                if (transform.rotation != targetRot) /* Does not equal our target rotation */
+                {
+                    //Slerp towards rotation
+                    transform.rotation = Quaternion.Slerp(oldRot, targetRot, rotTimer * rotSpeed);
+                }
+            }
+
+            if (rotTimer > rotateTime)
+            {
+                //Reset
+                rotate = false;
+                transform.rotation = targetRot;
+                changeRotateDir = true;
+                rotTimer = 0.0f;
+            }
         }
     }
 

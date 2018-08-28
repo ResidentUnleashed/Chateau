@@ -41,6 +41,7 @@ public class TestMove : MonoBehaviour
     private Rigidbody rb;
     private PlayerRotation playerRotation;
     private RaycastDetection raycastDetection;
+    private ChangeForm changeForm;
     private GameObject anch;
     private Animator animator;
     private int anchorCount = 0;
@@ -118,6 +119,7 @@ public class TestMove : MonoBehaviour
         playerRotation = GetComponent<PlayerRotation>();
         raycastDetection = GetComponent<RaycastDetection>();
         animator = GetComponent<Animator>();
+        changeForm = GetComponent<ChangeForm>();
         respawnPos = transform.position;
     }
 
@@ -277,7 +279,7 @@ public class TestMove : MonoBehaviour
             }
 
             //Up
-            if (Physics.Raycast(transform.position, transform.up, out objectHit, 0.5f))
+            if (Physics.Raycast(transform.position, transform.up, out objectHit, 0.5f) && changeForm.IsLittle)
             {
                 if (!onWall)
                 {
@@ -300,7 +302,7 @@ public class TestMove : MonoBehaviour
             }
 
             //Forward
-            else if (Physics.Raycast(transform.position, transform.forward, out objectHit, wallDetection) && inputY > 0)
+            else if (Physics.Raycast(transform.position, transform.forward, out objectHit, wallDetection) && inputY > 0 && changeForm.IsLittle)
             {
                 Debug.Log("Forward Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, transform.forward, Color.blue);
@@ -320,7 +322,7 @@ public class TestMove : MonoBehaviour
             }
 
             //Right
-            else if (Physics.Raycast(transform.position, transform.right, out objectHit, wallDetection) && inputX > 0)
+            else if (Physics.Raycast(transform.position, transform.right, out objectHit, wallDetection) && inputX > 0 && changeForm.IsLittle)
             {
                 Debug.Log("Right Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, transform.right, Color.blue);
@@ -340,7 +342,7 @@ public class TestMove : MonoBehaviour
             }
 
             //Back
-            else if (Physics.Raycast(transform.position, -transform.forward, out objectHit, wallDetection) && inputY < 0)
+            else if (Physics.Raycast(transform.position, -transform.forward, out objectHit, wallDetection) && inputY < 0 && changeForm.IsLittle)
             {
                 Debug.Log("Back Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, -transform.forward, Color.blue);
@@ -360,7 +362,7 @@ public class TestMove : MonoBehaviour
             }
 
             //Left
-            else if (Physics.Raycast(transform.position, -transform.right, out objectHit, wallDetection) && inputX < 0)
+            else if (Physics.Raycast(transform.position, -transform.right, out objectHit, wallDetection) && inputX < 0 && changeForm.IsLittle)
             {
                 Debug.Log("Left Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, -transform.right, Color.blue);
@@ -379,7 +381,7 @@ public class TestMove : MonoBehaviour
                 }
             }
             //Down
-            else if (Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f) && !onWall && !onGround)
+            else if (Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f) && !onWall && !onGround && changeForm.IsLittle)
             {
                 Debug.Log("Downwards Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, transform.forward, Color.blue);
@@ -436,7 +438,7 @@ public class TestMove : MonoBehaviour
     private void RotatePlayer()
     {
         //Mounting wall from down raycast
-        if (Input.GetButtonDown("Fire1") && !onWall && downDetect && raycastDetection.InShadow == true)
+        if (Input.GetButtonDown("Fire1") && !onWall && downDetect && raycastDetection.InShadow == true && changeForm.IsLittle)
         {
             onWall = true;
             fallOff = false;
@@ -445,7 +447,7 @@ public class TestMove : MonoBehaviour
             changeRotateDir = true;
         }
         //Mounting wall
-        else if (direction != Vector3.zero && raycastDetection.InShadow == true && !downDetect)
+        else if (direction != Vector3.zero && raycastDetection.InShadow == true && !downDetect && changeForm.IsLittle)
         {
             fallOff = false;
             canMove = false;
@@ -479,7 +481,7 @@ public class TestMove : MonoBehaviour
             direction = Vector3.zero;
         }
         //Leaving Wall
-        else if (direction != Vector3.zero && detectFloor == true && onWall)
+        else if (direction != Vector3.zero && detectFloor == true && onWall && changeForm.IsLittle)
         {
             onWall = false;
             canMove = false;
