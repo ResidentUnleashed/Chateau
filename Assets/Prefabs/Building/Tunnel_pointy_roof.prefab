@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 65702383613495462}
   - component: {fileID: 65803316249023292}
   m_Layer: 0
-  m_Name: Tunnel_Pointy_Roof
+  m_Name: Tunnel_pointy_roof
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
