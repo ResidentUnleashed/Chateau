@@ -22,12 +22,15 @@ public class FixedCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if(changeCameraTarget.CanSwitchTarget)
+        if(changeCameraTarget != null)
         {
-            StartCoroutine(Transition());
-            changeCameraTarget.CanSwitchTarget = false;
+            if (changeCameraTarget.CanSwitchTarget)
+            {
+                StartCoroutine(Transition());
+                changeCameraTarget.CanSwitchTarget = false;
+            }
         }
-	}
+    }
 
 
     private IEnumerator Transition()
