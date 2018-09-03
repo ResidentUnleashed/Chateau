@@ -518,7 +518,6 @@ public class BrokenMove : MonoBehaviour
 
             rotate = true;
             direction = Vector3.zero;
-
         }
 
 
