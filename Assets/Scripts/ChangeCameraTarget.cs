@@ -15,6 +15,7 @@ public class ChangeCameraTarget : MonoBehaviour {
     public bool CanSwitchTarget
     {
         get { return canSwitchTarget; }
+        set { canSwitchTarget = value; }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,14 +25,6 @@ public class ChangeCameraTarget : MonoBehaviour {
             //Get the child transform and we can switch target
             newTarget = other.transform.GetChild(0).gameObject.transform;
             canSwitchTarget = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.transform.tag == "MoveCamera")
-        {
-            canSwitchTarget = false;
         }
     }
 }
