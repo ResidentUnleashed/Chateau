@@ -6,7 +6,7 @@ public class ChangeCameraTarget : MonoBehaviour {
 
     private Transform newTarget = null;
     private bool canSwitchTarget = false;
-    private List<GameObject> targetList;
+    private GameObject[] targetList;
 
     public Transform NewTarget
     {
@@ -19,12 +19,19 @@ public class ChangeCameraTarget : MonoBehaviour {
         set { canSwitchTarget = value; }
     }
 
+    private void Awake()
+    {
+        targetList = GameObject.FindGameObjectsWithTag("MoveCamera");
+    }
+
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "MoveCamera")
         {
             //Set all to active
-            for (int i = 0; i < targetList.Count; i++)
+            for (int i = 0; i < targetList.Length; i++)
             {
                 targetList[i].SetActive(true);
             }
@@ -33,7 +40,7 @@ public class ChangeCameraTarget : MonoBehaviour {
             newTarget = other.transform.GetChild(0).gameObject.transform;
 
             //Deactivate current
-            for (int i = 0; i < targetList.Count; i++)
+            for (int i = 0; i < targetList.Length; i++)
             {
                 if(other.transform == targetList[i].transform)
                 {
