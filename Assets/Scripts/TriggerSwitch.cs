@@ -7,6 +7,8 @@ public class TriggerSwitch : MonoBehaviour {
     [SerializeField]
     private GameObject[] targetList;
 
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.transform.tag == "Player")

@@ -8,46 +8,48 @@ public class ChangeCameraTarget : MonoBehaviour
     [SerializeField]
     private float lerpSpeed = 1.0f;
     [SerializeField]
-    private float maxTime;
-    [SerializeField]
     private GameObject gameCamera;
 
 
     private Transform newTarget = null;
+    private bool moveTowards = false;
+    private float t;
+    private Vector3 startPos;
+
+    private void Update()
+    {
+        if(moveTowards)
+        {
+            //Clock
+            t += Time.deltaTime * lerpSpeed;
+
+            //Lerp to new destination
+            gameCamera.transform.position = Vector3.MoveTowards(startPos, newTarget.position, t);
+
+            if(Vector3.Distance(gameCamera.transform.position, newTarget.position) < 0.1f)
+            {
+                moveTowards = false;
+            }
+        }
+    }
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "MoveCamera")
         {
+            t = 0.0f;
+
+            //Get our starting pos
+            startPos = gameCamera.transform.position;
+
             //Get the child transform and we can switch target
             newTarget = other.transform.GetChild(0).gameObject.transform;
 
             if(gameCamera.transform != newTarget)
             {
-                StartCoroutine(Transition());
+                moveTowards = true;
             }
-        }
-    }
-
-    private IEnumerator Transition()
-    {
-        //Create the float t (time)
-        float t = 0.0f;
-
-        //Get our starting pos
-        Vector3 startPos = gameCamera.transform.position;
-
-        while (t < maxTime)
-        {
-            //Clock
-            t += Time.deltaTime * (Time.timeScale / lerpSpeed);
-
-            //Lerp to new destination
-            gameCamera.transform.position = Vector3.MoveTowards(startPos, newTarget.position, t);
-
-            //Return
-            yield return 0;
         }
     }
 }
