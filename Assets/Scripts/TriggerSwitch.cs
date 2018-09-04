@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerSwitch : MonoBehaviour {
 
+    [SerializeField]
     private GameObject[] targetList;
 
     // Use this for initialization
