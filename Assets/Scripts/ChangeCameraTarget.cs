@@ -75,7 +75,7 @@ public class ChangeCameraTarget : MonoBehaviour
         float t = 0.0f;
 
         //Get our starting pos
-        Vector3 startPos = transform.position;
+        Vector3 startPos = gameCamera.transform.position;
 
         while (t < 1.0f)
         {
