@@ -35,16 +35,13 @@ public class ChangeCameraTarget : MonoBehaviour
         //Get our starting pos
         Vector3 startPos = gameCamera.transform.position;
 
-        while (t < 1.0f)
-        {
-            //Clock
-            t += Time.deltaTime * (Time.timeScale / lerpSpeed);
+        //Clock
+        t += Time.deltaTime * (Time.timeScale / lerpSpeed);
 
-            //Lerp to new destination
-            gameCamera.transform.position = Vector3.MoveTowards(startPos, newTarget.position, t);
+        //Lerp to new destination
+        gameCamera.transform.position = Vector3.MoveTowards(startPos, newTarget.position, t);
 
-            //Return
-            yield return 0;
-        }
+        //Return
+        yield return 0;
     }
 }
