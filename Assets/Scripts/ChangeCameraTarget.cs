@@ -43,6 +43,7 @@ public class ChangeCameraTarget : MonoBehaviour
     {
         if (other.transform.tag == "MoveCamera")
         {
+           
             if (!first)
             {
                 //Set all to active
@@ -55,14 +56,17 @@ public class ChangeCameraTarget : MonoBehaviour
             //Get the child transform and we can switch target
             newTarget = other.transform.GetChild(0).gameObject.transform;
 
-            //Deactivate current
-            for (int i = 0; i < targetList.Length; i++)
+            if(gameCamera.transform != newTarget)
             {
-                if (other.transform == targetList[i].transform)
+                //Deactivate current
+                for (int i = 0; i < targetList.Length; i++)
                 {
-                    first = false;
-                    StartCoroutine(Transition());
-                    targetList[i].SetActive(false);
+                    if (other.transform == targetList[i].transform)
+                    {
+                        first = false;
+                        StartCoroutine(Transition());
+                        targetList[i].SetActive(false);
+                    }
                 }
             }
         }
