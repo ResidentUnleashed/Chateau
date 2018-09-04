@@ -12,62 +12,17 @@ public class ChangeCameraTarget : MonoBehaviour
 
 
     private Transform newTarget = null;
-    private bool canSwitchTarget = false;
-    private GameObject[] targetList;
-    private bool hasMoved = false;
-    private bool first = true;
-
-    public Transform NewTarget
-    {
-        get { return newTarget; }
-    }
-
-    public bool CanSwitchTarget
-    {
-        get { return canSwitchTarget; }
-        set { canSwitchTarget = value; }
-    }
-
-    public bool HasMoved
-    {
-        get { return hasMoved; }
-        set { hasMoved = value; }
-    }
-
-    private void Awake()
-    {
-        targetList = GameObject.FindGameObjectsWithTag("MoveCamera");
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "MoveCamera")
         {
-           
-            if (!first)
-            {
-                //Set all to active
-                for (int i = 0; i < targetList.Length; i++)
-                {
-                    targetList[i].SetActive(true);
-                }
-            }
-
             //Get the child transform and we can switch target
             newTarget = other.transform.GetChild(0).gameObject.transform;
 
             if(gameCamera.transform != newTarget)
             {
-                //Deactivate current
-                for (int i = 0; i < targetList.Length; i++)
-                {
-                    if (other.transform == targetList[i].transform)
-                    {
-                        first = false;
-                        StartCoroutine(Transition());
-                        targetList[i].SetActive(false);
-                    }
-                }
+                StartCoroutine(Transition());
             }
         }
     }
