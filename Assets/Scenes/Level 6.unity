@@ -122,13 +122,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8796562}
   - component: {fileID: 8796561}
+  - component: {fileID: 8796563}
   m_Layer: 0
   m_Name: CameraTrigger_U2S
   m_TagString: MoveCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &8796561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,13 +149,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 8796560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 6.91, z: 10}
+  m_LocalPosition: {x: 0.4, y: 6.91, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 847635371}
+  - {fileID: 1087242540}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8796563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 8796560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df4f69a7b0fbf44ebe71270a65d2132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetList:
+  - {fileID: 1326670471}
 --- !u!1001 &19752407
 Prefab:
   m_ObjectHideFlags: 0
@@ -206,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 89670270}
   - component: {fileID: 89670269}
+  - component: {fileID: 89670271}
   m_Layer: 0
   m_Name: CameraTrigger_S2L
   m_TagString: MoveCamera
@@ -232,13 +247,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 89670268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.63, y: 7.25, z: 7}
+  m_LocalPosition: {x: -6.82, y: 7.25, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1862753865}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &89670271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 89670268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df4f69a7b0fbf44ebe71270a65d2132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetList:
+  - {fileID: 998763344}
 --- !u!1001 &95980471
 Prefab:
   m_ObjectHideFlags: 0
@@ -1093,7 +1121,6 @@ GameObject:
   - component: {fileID: 376456260}
   - component: {fileID: 376456259}
   - component: {fileID: 376456258}
-  - component: {fileID: 376456262}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1157,25 +1184,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 376456257}
-  m_LocalRotation: {x: -0.31711742, y: 0.09559755, z: -0.0320948, w: -0.94300985}
+  m_LocalRotation: {x: 0.27423728, y: -0.09694945, z: 0.027746221, w: 0.9563602}
   m_LocalPosition: {x: -0.65, y: 9.31, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 37.173, y: 78.415, z: -0.007}
---- !u!114 &376456262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 376456257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be44930e64890d44c85a7ef400b8ff19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lerpSpeed: 1
+  m_LocalEulerAnglesHint: {x: 32, y: -11.579, z: -0.007}
 --- !u!1001 &392199377
 Prefab:
   m_ObjectHideFlags: 0
@@ -1812,6 +1827,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114482801352045242, guid: b2c12c024e8dd524d875c0b31e99edab,
+        type: 2}
+      propertyPath: gameCamera
+      value: 
+      objectReference: {fileID: 376456257}
+    - target: {fileID: 114482801352045242, guid: b2c12c024e8dd524d875c0b31e99edab,
+        type: 2}
+      propertyPath: maxTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482801352045242, guid: b2c12c024e8dd524d875c0b31e99edab,
+        type: 2}
+      propertyPath: lerpSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2c12c024e8dd524d875c0b31e99edab, type: 2}
   m_IsPrefabParent: 0
@@ -2213,34 +2243,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fa80171befa980428d85fa839d11161, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &847635370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 847635371}
-  m_Layer: 0
-  m_Name: CameraTargetStart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &847635371
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 847635370}
-  m_LocalRotation: {x: -0.31711742, y: 0.09559755, z: -0.0320948, w: -0.94300985}
-  m_LocalPosition: {x: -0.8600001, y: 2.4000006, z: -8.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8796562}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891798051 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1953364284640650, guid: e73d3a092518ded47b7fbc308cb86f86,
@@ -2476,13 +2478,14 @@ GameObject:
   m_Component:
   - component: {fileID: 998763346}
   - component: {fileID: 998763345}
+  - component: {fileID: 998763347}
   m_Layer: 0
   m_Name: CameraTrigger_L2S
   m_TagString: MoveCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &998763345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2502,13 +2505,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 998763344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.04, y: 7.25, z: 7}
+  m_LocalPosition: {x: -4.96, y: 7.25, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1267364337}
+  - {fileID: 1504319197}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998763347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998763344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df4f69a7b0fbf44ebe71270a65d2132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetList:
+  - {fileID: 89670268}
 --- !u!1001 &1006461307
 Prefab:
   m_ObjectHideFlags: 0
@@ -2749,6 +2765,34 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 328a6fa79ca20c24ebd777b4821832bd, type: 3}
   m_PrefabInternal: {fileID: 1968559003}
+--- !u!1 &1087242539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1087242540}
+  m_Layer: 0
+  m_Name: CameraTriggerStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087242540
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087242539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.05, y: 2.4000006, z: -8.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8796562}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1111439193 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 328a6fa79ca20c24ebd777b4821832bd, type: 3}
@@ -3063,34 +3107,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 2.525681, z: 3}
   m_Center: {x: 1.0121415, y: 1.2570558, z: 1.0120211}
---- !u!1 &1267364336
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1267364337}
-  m_Layer: 0
-  m_Name: CameraTargetStart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1267364337
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1267364336}
-  m_LocalRotation: {x: -0.31711742, y: 0.09559755, z: -0.0320948, w: -0.94300985}
-  m_LocalPosition: {x: 4.39, y: 2.0600004, z: -5.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 998763346}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1279004340
 Prefab:
   m_ObjectHideFlags: 0
@@ -3252,6 +3268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1326670473}
   - component: {fileID: 1326670472}
+  - component: {fileID: 1326670474}
   m_Layer: 0
   m_Name: CameraTrigger_S2U
   m_TagString: MoveCamera
@@ -3278,13 +3295,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1326670471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 7.92, z: 10}
+  m_LocalPosition: {x: 0.21, y: 8.75, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 175905079}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1326670474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326670471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df4f69a7b0fbf44ebe71270a65d2132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetList:
+  - {fileID: 8796560}
 --- !u!1 &1333506759 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1953364284640650, guid: e73d3a092518ded47b7fbc308cb86f86,
@@ -3628,6 +3658,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 2.525681, z: 3}
   m_Center: {x: 1.0121415, y: 1.2570558, z: 1.0120211}
+--- !u!1 &1504319196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1504319197}
+  m_Layer: 0
+  m_Name: CameraTriggerStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1504319197
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504319196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.31, y: 2.0600004, z: -5.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 998763346}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1507284064
 Prefab:
   m_ObjectHideFlags: 0
