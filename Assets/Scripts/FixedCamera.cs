@@ -27,6 +27,7 @@ public class FixedCamera : MonoBehaviour {
             if (changeCameraTarget.CanSwitchTarget)
             {
                 StartCoroutine(Transition());
+                changeCameraTarget.HasMoved = false;
                 changeCameraTarget.CanSwitchTarget = false;
             }
         }
