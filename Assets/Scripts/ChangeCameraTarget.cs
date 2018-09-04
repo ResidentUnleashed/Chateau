@@ -41,7 +41,7 @@ public class ChangeCameraTarget : MonoBehaviour
             t += Time.deltaTime * (Time.timeScale / lerpSpeed);
 
             //Lerp to new destination
-            gameCamera.transform.position = Vector3.Lerp(startPos, newTarget.position, t);
+            gameCamera.transform.position = Vector3.MoveTowards(startPos, newTarget.position, t);
 
             //Return
             yield return 0;
