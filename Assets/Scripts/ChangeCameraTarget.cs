@@ -21,6 +21,12 @@ public class ChangeCameraTarget : MonoBehaviour
         set { canSwitchTarget = value; }
     }
 
+    public bool HasMoved
+    {
+        get { return hasMoved; }
+        set { hasMoved = value; }
+    }
+
     private void Awake()
     {
         targetList = GameObject.FindGameObjectsWithTag("MoveCamera");
