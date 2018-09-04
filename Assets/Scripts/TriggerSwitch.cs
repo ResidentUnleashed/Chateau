@@ -7,13 +7,6 @@ public class TriggerSwitch : MonoBehaviour {
     [SerializeField]
     private GameObject[] targetList;
 
-    // Use this for initialization
-    void Awake ()
-    {
-        targetList = GameObject.FindGameObjectsWithTag("MoveCamera");
-    }
-
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.transform.tag == "Player")
