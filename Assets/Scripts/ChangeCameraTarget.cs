@@ -9,6 +9,7 @@ public class ChangeCameraTarget : MonoBehaviour
     private bool canSwitchTarget = false;
     private GameObject[] targetList;
     private bool hasMoved = false;
+    private bool first = true;
 
     public Transform NewTarget
     {
@@ -36,7 +37,7 @@ public class ChangeCameraTarget : MonoBehaviour
     {
         if (other.transform.tag == "MoveCamera")
         {
-            if (!hasMoved)
+            if (!hasMoved && !first)
             {
                 //Set all to active
                 for (int i = 0; i < targetList.Length; i++)
@@ -55,6 +56,7 @@ public class ChangeCameraTarget : MonoBehaviour
                 if (other.transform == targetList[i].transform)
                 {
                     canSwitchTarget = true;
+                    first = false;
                     targetList[i].SetActive(false);
                 }
             }
