@@ -8,10 +8,13 @@ public class ChangeCameraTarget : MonoBehaviour
     [SerializeField]
     private float lerpSpeed = 1.0f;
     [SerializeField]
+    private float maxTime;
+    [SerializeField]
     private GameObject gameCamera;
 
 
     private Transform newTarget = null;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,13 +38,16 @@ public class ChangeCameraTarget : MonoBehaviour
         //Get our starting pos
         Vector3 startPos = gameCamera.transform.position;
 
-        //Clock
-        t += Time.deltaTime * (Time.timeScale / lerpSpeed);
+        while (t < maxTime)
+        {
+            //Clock
+            t += Time.deltaTime * (Time.timeScale / lerpSpeed);
 
-        //Lerp to new destination
-        gameCamera.transform.position = Vector3.MoveTowards(startPos, newTarget.position, t);
+            //Lerp to new destination
+            gameCamera.transform.position = Vector3.Lerp(startPos, newTarget.position, t);
 
-        //Return
-        yield return 0;
+            //Return
+            yield return 0;
+        }
     }
 }
