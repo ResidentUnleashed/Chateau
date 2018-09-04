@@ -6,7 +6,7 @@ public class FixedCamera : MonoBehaviour {
 
     [Tooltip("How fast the camera moves from one position to the next.")]
     [SerializeField]
-    private float lerpSpeed = 3.0f;
+    private float lerpSpeed = 1.0f;
 
 
     private ChangeCameraTarget changeCameraTarget;
