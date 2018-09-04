@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4800692524362948}
   m_Layer: 8
   m_Name: Tail04_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 4063584732254066}
   m_Layer: 8
   m_Name: Tail07_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 119491359403686122}
   m_Layer: 8
   m_Name: Projector
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 4805072675645716}
   m_Layer: 8
   m_Name: Tail01_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 114926900293705972}
   - component: {fileID: 114013575842686156}
   - component: {fileID: 114315605034291288}
+  - component: {fileID: 114647225109969002}
   m_Layer: 8
   m_Name: Pip
   m_TagString: Player
@@ -120,7 +121,7 @@ GameObject:
   - component: {fileID: 4571797082534106}
   m_Layer: 8
   m_Name: Tail03_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +137,7 @@ GameObject:
   - component: {fileID: 95782772593917302}
   m_Layer: 8
   m_Name: Pip_3D_Animations04
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +152,7 @@ GameObject:
   - component: {fileID: 4813204352311298}
   m_Layer: 8
   m_Name: Tail02_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +168,7 @@ GameObject:
   - component: {fileID: 137761740912972434}
   m_Layer: 8
   m_Name: Mesh_Test:polySurface1
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +199,7 @@ GameObject:
   - component: {fileID: 4731019155802874}
   m_Layer: 8
   m_Name: Tail08_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +214,7 @@ GameObject:
   - component: {fileID: 4212956292849412}
   m_Layer: 8
   m_Name: Tail06_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +230,7 @@ GameObject:
   - component: {fileID: 119312011638625960}
   m_Layer: 8
   m_Name: Projector (2)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +245,7 @@ GameObject:
   - component: {fileID: 4814613243506342}
   m_Layer: 8
   m_Name: Tail05_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,7 +261,7 @@ GameObject:
   - component: {fileID: 119549257517377140}
   m_Layer: 8
   m_Name: Projector (1)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +276,7 @@ GameObject:
   - component: {fileID: 4571082910669014}
   m_Layer: 8
   m_Name: Root_JNT
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,8 +412,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1350688391937058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1978817, y: 3, z: 8.250427}
+  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: 0, y: 3.09, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4748802294434190}
@@ -420,7 +421,7 @@ Transform:
   - {fileID: 4816134312397612}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!4 &4731019155802874
 Transform:
   m_ObjectHideFlags: 1
@@ -555,7 +556,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1350688391937058}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0133a7e53e7e43d44a2a0be109203f60, type: 3}
   m_Name: 
@@ -607,7 +608,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1350688391937058}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99b542b261aa04b4eb28a3e9adba3fc3, type: 3}
   m_Name: 
@@ -637,13 +638,24 @@ MonoBehaviour:
   minClampAmount: -35
   cameraSpeed: 2
   cameraToOriginSpeed: 0.2
---- !u!114 &114734580490668224
+--- !u!114 &114647225109969002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1350688391937058}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0330593d2c6ca4685c1af09b805732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114734580490668224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350688391937058}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1aa307368099a94fb77ebfd701a606e, type: 3}
   m_Name: 
