@@ -12,10 +12,9 @@ public class MainMenu : MonoBehaviour
     private GameObject levelSelectUI;
 
 
-
-
     public void BackToMenu()
     {
+        //Turn on the main menu
         creditsUI.SetActive(false);
         levelSelectUI.SetActive(false);
         mainMenuUI.SetActive(true);
@@ -23,8 +22,17 @@ public class MainMenu : MonoBehaviour
 
     public void LevelSelect()
     {
+        //Turn on level select
         creditsUI.SetActive(false);
         mainMenuUI.SetActive(false);
         levelSelectUI.SetActive(true);
+    }
+
+    public void Credits()
+    {
+        //Turn on credits
+        mainMenuUI.SetActive(false);
+        levelSelectUI.SetActive(false);
+        creditsUI.SetActive(true);
     }
 }

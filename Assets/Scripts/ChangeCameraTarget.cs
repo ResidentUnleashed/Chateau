@@ -28,6 +28,8 @@ public class ChangeCameraTarget : MonoBehaviour
 
             if(Vector3.Distance(gameCamera.transform.position, newTarget.position) < 0.1f)
             {
+
+                gameCamera.transform.position = newTarget.position;
                 moveTowards = false;
             }
         }
