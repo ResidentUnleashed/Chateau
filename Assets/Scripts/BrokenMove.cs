@@ -290,15 +290,15 @@ public class BrokenMove : MonoBehaviour
         if (canMove)
         {
             //Downwards detection
-            //if (!Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f))
-            //{
-            //    fallOff = true;
-            //
-            //    if (onGround && !rotateToZero)
-            //    {
-            //        onGround = false;
-            //    }
-            //}
+            if (!Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f))
+            {
+                fallOff = true;
+            
+                if (onGround && !rotateToZero)
+                {
+                    onGround = false;
+                }
+            }
 
             //Up
             if (Physics.Raycast(transform.position, transform.up, out objectHit, 0.5f) && changeForm.IsLittle)
