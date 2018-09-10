@@ -14,7 +14,6 @@ public class MovingPlatform : MonoBehaviour {
     private float maxWait = 1.0f;
 
     private Transform startPos;
-    private float timer;
     private float waitTimer;
     private bool moveTowardsTarget = true;
     private bool wait = false;
@@ -28,13 +27,23 @@ public class MovingPlatform : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(moveTowardsTarget && !wait)
+        if (wait)
+        {
+            waitTimer += Time.deltaTime;
+
+            if (waitTimer > maxWait)
+            {
+                //Waited long enough
+                wait = false;
+            }
+        }
+        else if (moveTowardsTarget && !wait)
         {
             waitTimer = 0.0f;
-            timer += Time.deltaTime * speed;
+            
 
             //Move to new destination
-            transform.position = Vector3.MoveTowards(startPos.position, target.position, timer);
+            transform.position = Vector3.MoveTowards(startPos.position, target.position, speed);
 
             //In range
             if (Vector3.Distance(transform.position, target.position) < 1.0f)
@@ -48,10 +57,9 @@ public class MovingPlatform : MonoBehaviour {
         else if (!moveTowardsTarget && !wait)
         {
             waitTimer = 0.0f;
-            timer += Time.deltaTime * speed;
 
             //Move to new destination
-            transform.position = Vector3.MoveTowards(target.position, startPos.position, timer);
+            transform.position = Vector3.MoveTowards(target.position, startPos.position, speed);
 
             //In range
             if (Vector3.Distance(transform.position, startPos.position) < 1.0f)
@@ -63,17 +71,7 @@ public class MovingPlatform : MonoBehaviour {
             }
         }
         
-        if(wait)
-        {
-            timer = 0.0f;
-            waitTimer += Time.deltaTime;
-
-            if(waitTimer > maxWait)
-            {
-                //Waited long enough
-                wait = false;
-            }
-        }
+        
 
     }
 }
