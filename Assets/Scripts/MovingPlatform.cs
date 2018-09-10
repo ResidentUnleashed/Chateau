@@ -23,6 +23,7 @@ public class MovingPlatform : MonoBehaviour {
 
     private float waitTimer;
     private bool wait = false;
+    private bool hasSwitchedPos = false;
 
 
 	// Update is called once per frame
@@ -40,15 +41,22 @@ public class MovingPlatform : MonoBehaviour {
         {
             waitTimer += Time.deltaTime;
 
-            //Switch the start pos and the end pos
-            Transform tempTrans = target;
+            if(!hasSwitchedPos)
+            {
+                //Switch the start pos and the end pos
+                Transform tempTrans = target;
 
-            target = startPos;
-            startPos = tempTrans;
+                target = startPos;
+                startPos = tempTrans;
+
+                hasSwitchedPos = true;
+            }
+            
         }
         else 
         {
             waitTimer = 0.0f;
+            hasSwitchedPos = false;
             
 
             //Move to new destination
