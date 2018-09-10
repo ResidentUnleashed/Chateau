@@ -52,7 +52,7 @@ public class MovingPlatform : MonoBehaviour {
             
 
             //Move to new destination
-            transform.position = Vector3.MoveTowards(startPos.position, target.position, speed);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed);
 
             //In range
             if (Vector3.Distance(transform.position, target.position) < range)
