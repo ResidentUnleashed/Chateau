@@ -31,6 +31,7 @@ public class ButtonSelect : MonoBehaviour {
 
             //Cap button index
             if (buttonIndex < 0)
+
             {
                 buttonIndex = 0;
             }
@@ -42,11 +43,11 @@ public class ButtonSelect : MonoBehaviour {
         {
             if(buttonList[i] == buttonList[buttonIndex])
             {
-                
+                //Highlight
             }
             else
             {
-               
+               //Unhighlight
             }
         }
     }

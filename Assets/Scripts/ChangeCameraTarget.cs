@@ -23,12 +23,13 @@ public class ChangeCameraTarget : MonoBehaviour
             //Clock
             t += Time.deltaTime * lerpSpeed;
 
-            //Lerp to new destination
+            //Move to new destination
             gameCamera.transform.position = Vector3.MoveTowards(startPos, newTarget.position, t);
 
+            //In range
             if(Vector3.Distance(gameCamera.transform.position, newTarget.position) < 0.1f)
             {
-
+                //Hit target
                 gameCamera.transform.position = newTarget.position;
                 moveTowards = false;
             }
