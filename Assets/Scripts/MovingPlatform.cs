@@ -17,17 +17,15 @@ public class MovingPlatform : MonoBehaviour {
     [SerializeField]
     private float maxWait = 1.0f;
 
+    [SerializeField]
     private Transform startPos;
+
+
     private float waitTimer;
     private bool moveTowardsTarget = true;
     private bool wait = false;
 
-	// Use this for initialization
-	void Start ()
-    {
-        startPos = transform;
-	}
-	
+
 	// Update is called once per frame
 	void Update ()
     {
