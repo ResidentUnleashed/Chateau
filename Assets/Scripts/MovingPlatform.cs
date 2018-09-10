@@ -22,7 +22,6 @@ public class MovingPlatform : MonoBehaviour {
 
 
     private float waitTimer;
-    private bool moveTowardsTarget = true;
     private bool wait = false;
 
 
@@ -40,8 +39,14 @@ public class MovingPlatform : MonoBehaviour {
         if (wait)
         {
             waitTimer += Time.deltaTime;
+
+            //Switch the start pos and the end pos
+            Transform tempTrans = target;
+
+            target = startPos;
+            startPos = tempTrans;
         }
-        else if (moveTowardsTarget && !wait)
+        else 
         {
             waitTimer = 0.0f;
             
@@ -55,27 +60,7 @@ public class MovingPlatform : MonoBehaviour {
                 //Hit target and wait
                 transform.position = target.position;
                 wait = true;
-                moveTowardsTarget = false;
             }
         }
-        else if (!moveTowardsTarget && !wait)
-        {
-            waitTimer = 0.0f;
-
-            //Move to new destination
-            transform.position = Vector3.MoveTowards(target.position, startPos.position, speed);
-
-            //In range
-            if (Vector3.Distance(transform.position, startPos.position) < range)
-            {
-                //Hit target and wait
-                transform.position = startPos.position;
-                wait = true;
-                moveTowardsTarget = true;
-            }
-        }
-        
-        
-
     }
 }
