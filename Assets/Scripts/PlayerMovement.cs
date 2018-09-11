@@ -312,8 +312,6 @@ public class PlayerMovement : MonoBehaviour
 
                 if(objectHit.transform.tag == "Roof")
                 {
-                    onWall = false;
-                    onGround = false;
                     onRoof = true;
                 }
             }
@@ -350,6 +348,11 @@ public class PlayerMovement : MonoBehaviour
 
                 //If hit wall or floor, change direction to the normal of the hit object
                 if (objectHit.transform.tag == "Wall")
+                {
+                    direction = objectHit.normal.normalized;
+                    detectFloor = false;
+                }
+                else if (objectHit.transform.tag == "Roof")
                 {
                     direction = objectHit.normal.normalized;
                     detectFloor = false;
