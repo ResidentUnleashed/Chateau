@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("The amount of time it takes to rotate")]
     [SerializeField]
     private float rotateTime = 1.0f;
+    [SerializeField]
+    private GameObject m_model = null;
+    [SerializeField]
+    private GameObject shadow = null;
     #endregion
 
     #region Private vars
@@ -36,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 direction = Vector3.zero;
     private Vector3 localMove;
     private Vector3 respawnPos = Vector3.zero;
+    private Vector3 vel;
     private Quaternion oldRot;
     private Quaternion targetRot;
     private Rigidbody rb;
@@ -81,6 +86,11 @@ public class PlayerMovement : MonoBehaviour
         set { rightCorner = value; }
     }
 
+    public bool OnWall
+    {
+        get { return onWall; }
+    }
+
     public bool OnGround
     {
         get { return onGround; ; }
@@ -110,12 +120,9 @@ public class PlayerMovement : MonoBehaviour
         get { return respawnPos; }
         set { respawnPos = value; }
     }
-
-    public bool OnWall
-    {
-        get { return onWall; ; }
-    }
     #endregion
+
+
 
     void Awake()
     {
@@ -131,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         #region Small if checks
-        if(anchorCount == 1 && !onGround)
+        if (anchorCount == 1 && !onGround)
         {
             anch = Instantiate(anchor, transform.position + new Vector3(anchorOffset, 0, anchorDistance), Quaternion.identity);
             transform.parent = anch.transform;
@@ -156,7 +163,6 @@ public class PlayerMovement : MonoBehaviour
         {
             //Restore movement
             canMove = true;
-            playerRotation.enabled = true;
         }
 
         if (fallOff)
@@ -176,48 +182,13 @@ public class PlayerMovement : MonoBehaviour
             attachTimer = 0.0f;
         }
 
-        if(isDead)
+        if (isDead)
         {
             respawning = true;
             rb.angularVelocity = Vector3.zero;
             transform.position = respawnPos;
             transform.rotation = Quaternion.identity;
             isDead = false;
-        }
-
-        //Animations
-        if(inputX > 0.0f || inputY > 0.0f)
-        {
-            if (animator != null)
-            {
-                animator.SetBool("IsWalking", true);
-            }
-        }
-        else
-        {
-            if(animator != null)
-            {
-                animator.SetBool("IsWalking", false);
-            }
-        }
-
-        if(raycastDetection.InShadow)
-        {
-            if(animator != null)
-            {
-                animator.SetBool("IsFlat", true);
-                animator.SetBool("Flatten", true);
-                animator.SetBool("Unflatten", false);
-            }
-        }
-        else
-        {
-            if(animator != null)
-            {
-                animator.SetBool("IsFlat", false);
-                animator.SetBool("Flatten", false);
-                animator.SetBool("Unflatten", true);
-            }
         }
         #endregion
 
@@ -232,8 +203,43 @@ public class PlayerMovement : MonoBehaviour
             //Calculate movement based on controller input normalised
             inputX = Input.GetAxisRaw("Horizontal");
             inputY = Input.GetAxisRaw("Vertical");
+            Vector3 horizontalMove = Vector3.zero;
+            Vector3 verticalMove = Vector3.zero;
+            Vector3 moveDir = Vector3.zero;
 
-            Vector3 moveDir = new Vector3(inputX, 0, inputY).normalized;
+
+
+            if (onWall)
+            {
+                //Wall relative movement
+                Vector3 velY = Vector3.up * inputY;// * Time.deltaTime * 100;
+                Vector3 velX = new Vector3(-transform.up.z, 0, transform.up.x) * inputX;
+                vel = Vector3.Normalize(velX + velY);
+                vel *= Time.deltaTime * 100;
+
+            }
+            else
+            {
+                // This is character relative movement
+                // vel = transform.forward * inputY + transform.right * inputX;
+                // vel *= Time.deltaTime * 100;
+
+                //Camera relative movement
+                vel = Camera.main.transform.rotation * (new Vector3(inputX, 0.0f, inputY));
+                vel.y = 0;
+                vel.Normalize();
+                vel *= Time.deltaTime * 100;
+            }
+
+            //Model rotation
+            m_model.gameObject.transform.LookAt(transform.position + vel);
+
+            shadow.transform.localRotation = Quaternion.Euler(new Vector3(0, Vector3.SignedAngle(transform.forward, m_model.gameObject.transform.forward, transform.up), 0));
+
+            //Update move direction
+            moveDir = vel;
+
+            //Smooth the movement
             Vector3 targetMoveAmount = moveDir * walkSpeed;
             moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
         }
@@ -251,7 +257,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Rotation across walls
         RotatePlayer();
-        
+
         //Rotate when you're back on the ground
         RotateBack();
 
@@ -260,9 +266,9 @@ public class PlayerMovement : MonoBehaviour
             FallOffWall();
         }
 
-        FallOutOfShadow();
-
         DetachOffWall();
+
+        FallOutOfShadow();
     }
 
     private void DetectWalls()
@@ -273,18 +279,26 @@ public class PlayerMovement : MonoBehaviour
         if (canMove)
         {
             //Downwards detection
-            if (!Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f))
+            if (!Physics.Raycast(shadow.transform.position, -shadow.transform.up, out objectHit, 0.5f))
             {
                 fallOff = true;
 
-                if(onGround && !rotateToZero)
+                if (onGround && !rotateToZero)
                 {
                     onGround = false;
                 }
             }
+            else
+            {
+                if (objectHit.transform.tag == "Floor")
+                {
+                    onWall = false;
+                    onGround = true;
+                }
+            }
 
             //Up
-            if (Physics.Raycast(transform.position, transform.up, out objectHit, 0.5f))
+            if (Physics.Raycast(shadow.transform.position, shadow.transform.up, out objectHit, 0.5f) && changeForm.IsLittle)
             {
                 if (!onWall)
                 {
@@ -307,7 +321,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Forward
-            else if (Physics.Raycast(transform.position, transform.forward, out objectHit, wallDetection))
+            else if (Physics.Raycast(shadow.transform.position, shadow.transform.forward, out objectHit, wallDetection) && (inputY != 0 || inputX != 0) && changeForm.IsLittle)
             {
                 Debug.Log("Forward Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, transform.forward, Color.blue);
@@ -326,67 +340,8 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
 
-            //Right
-            else if (Physics.Raycast(transform.position, transform.right, out objectHit, wallDetection))
-            {
-                Debug.Log("Right Raycast on: " + objectHit.collider);
-                Debug.DrawRay(transform.position, transform.right, Color.blue);
-                canRotate = true;
-
-                //If hit wall or floor, change direction to the normal of the hit object
-                if (objectHit.transform.tag == "Wall")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = false;
-                }
-                else if (objectHit.transform.tag == "Floor")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = true;
-                }
-            }
-
-            //Back
-            else if (Physics.Raycast(transform.position, -transform.forward, out objectHit, wallDetection))
-            {
-                Debug.Log("Back Raycast on: " + objectHit.collider);
-                Debug.DrawRay(transform.position, -transform.forward, Color.blue);
-                canRotate = true;
-
-                //If hit wall or floor, change direction to the normal of the hit object
-                if (objectHit.transform.tag == "Wall")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = false;
-                }
-                else if (objectHit.transform.tag == "Floor")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = true;
-                }
-            }
-
-            //Left
-            else if (Physics.Raycast(transform.position, -transform.right, out objectHit, wallDetection))
-            {
-                Debug.Log("Left Raycast on: " + objectHit.collider);
-                Debug.DrawRay(transform.position, -transform.right, Color.blue);
-                canRotate = true;
-
-                //If hit wall or floor, change direction to the normal of the hit object
-                if (objectHit.transform.tag == "Wall")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = false;
-                }
-                else if (objectHit.transform.tag == "Floor")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = true;
-                }
-            }
             //Down
-            else if (Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f) && !onWall && !onGround)
+            else if (Physics.Raycast(shadow.transform.position, -shadow.transform.up, out objectHit, 0.5f) && !onWall && !onGround && changeForm.IsLittle)
             {
                 Debug.Log("Downwards Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, transform.forward, Color.blue);
@@ -428,7 +383,8 @@ public class PlayerMovement : MonoBehaviour
         if (canMove)
         {
             //Apply movement to rigidbody
-            localMove = transform.TransformDirection(moveAmount) * Time.fixedDeltaTime;
+            //localMove = transform.TransformDirection(moveAmount) * Time.fixedDeltaTime;
+            localMove = moveAmount * Time.fixedDeltaTime;
             rb.MovePosition(rb.position + localMove);
         }
         else
@@ -442,87 +398,83 @@ public class PlayerMovement : MonoBehaviour
 
     private void RotatePlayer()
     {
-        if(changeForm.IsLittle)
+        //Mounting wall from down raycast
+        if (Input.GetButtonDown("Fire1") && !onWall && downDetect && raycastDetection.InShadow == true && changeForm.IsLittle)
         {
-            //Mounting wall from down raycast
-            if (Input.GetButtonDown("Fire1") && !onWall && downDetect && raycastDetection.InShadow == true)
+            onWall = true;
+            fallOff = false;
+            startAttachTimer = true;
+            rotateToZero = false;
+            changeRotateDir = true;
+        }
+        //Mounting wall
+        else if (direction != Vector3.zero && raycastDetection.InShadow == true && !downDetect && changeForm.IsLittle)
+        {
+            fallOff = false;
+            canMove = false;
+            onWall = true;
+            playerRotation.enabled = false;
+            rotTimer = 0.0f;
+            oldRot = transform.rotation;
+
+            RotateDirection();
+
+            #region Old Detect
+            //Looking into wall
+            //if (Vector3.Dot(transform.forward, direction) < -0.95f)
+            //{
+            //    targetRot = Quaternion.LookRotation(Vector3.up, direction);
+            //}
+            ////Looking Away From Wall
+            //else if (Vector3.Dot(transform.forward, direction) > 0.95f)
+            //{
+            //    targetRot = Quaternion.LookRotation(Vector3.down, direction);
+            //}
+            ////Looking Across the wall
+            //else if (Vector3.Dot(transform.forward, direction) < 0.05f &&
+            //    Vector3.Dot(transform.forward, direction) > -0.05f)
+            //{
+            //    targetRot = Quaternion.LookRotation(transform.forward, direction);
+            //}
+            #endregion
+
+            rotate = true;
+            direction = Vector3.zero;
+        }
+        //Leaving Wall
+        else if (direction != Vector3.zero && detectFloor == true && onWall && changeForm.IsLittle)
+        {
+            onWall = false;
+            canMove = false;
+            playerRotation.enabled = false;
+            rotTimer = 0.0f;
+            oldRot = transform.rotation;
+
+            RotateDirection();
+
+            rotate = true;
+            direction = Vector3.zero;
+        }
+
+
+        if (rotate == true)
+        {
+            rotTimer += Time.deltaTime;
+
+            if (transform.rotation != targetRot) /* Does not equal our target rotation */
             {
-                onWall = true;
-                fallOff = false;
-                startAttachTimer = true;
-                rotateToZero = false;
-                changeRotateDir = true;
+                //Slerp towards rotation
+                transform.rotation = Quaternion.Slerp(oldRot, targetRot, rotTimer * rotSpeed);
             }
-            //Leaving Wall
-            else if (Input.GetButtonDown("Fire1") && direction != Vector3.zero && detectFloor == true)
-            {
-                onWall = false;
-                canMove = false;
-                playerRotation.enabled = false;
-                rotTimer = 0.0f;
-                oldRot = transform.rotation;
+        }
 
-                RotateDirection();
-
-                rotate = true;
-                direction = Vector3.zero;
-
-            }
-            //Mounting wall
-            else if (Input.GetButtonDown("Fire1") && direction != Vector3.zero && raycastDetection.InShadow == true)
-            {
-                fallOff = false;
-                canMove = false;
-                onWall = true;
-                playerRotation.enabled = false;
-                rotTimer = 0.0f;
-                oldRot = transform.rotation;
-
-                RotateDirection();
-
-                #region Old Detect
-                //Looking into wall
-                //if (Vector3.Dot(transform.forward, direction) < -0.95f)
-                //{
-                //    targetRot = Quaternion.LookRotation(Vector3.up, direction);
-                //}
-                ////Looking Away From Wall
-                //else if (Vector3.Dot(transform.forward, direction) > 0.95f)
-                //{
-                //    targetRot = Quaternion.LookRotation(Vector3.down, direction);
-                //}
-                ////Looking Across the wall
-                //else if (Vector3.Dot(transform.forward, direction) < 0.05f &&
-                //    Vector3.Dot(transform.forward, direction) > -0.05f)
-                //{
-                //    targetRot = Quaternion.LookRotation(transform.forward, direction);
-                //}
-                #endregion
-
-                rotate = true;
-                direction = Vector3.zero;
-            }
-
-
-            if (rotate == true)
-            {
-                rotTimer += Time.deltaTime;
-
-                if (transform.rotation != targetRot) /* Does not equal our target rotation */
-                {
-                    //Slerp towards rotation
-                    transform.rotation = Quaternion.Slerp(oldRot, targetRot, rotTimer * rotSpeed);
-                }
-            }
-
-            if (rotTimer > rotateTime)
-            {
-                //Reset
-                rotate = false;
-                transform.rotation = targetRot;
-                changeRotateDir = true;
-                rotTimer = 0.0f;
-            }
+        if (rotTimer > rotateTime)
+        {
+            //Reset
+            rotate = false;
+            transform.rotation = targetRot;
+            changeRotateDir = true;
+            rotTimer = 0.0f;
         }
     }
 
@@ -581,7 +533,7 @@ public class PlayerMovement : MonoBehaviour
             rotateToZero = true;
             RotateDirection();
 
-            if(anch != null)
+            if (anch != null)
             {
                 transform.parent = null;
                 anchorCount = 0;
@@ -647,7 +599,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "LeftCorner")
+        if (other.tag == "LeftCorner")
         {
             leftCorner = true;
             anchorCount++;
@@ -659,7 +611,7 @@ public class PlayerMovement : MonoBehaviour
             anchorCount++;
         }
 
-        if(other.tag == "Death")
+        if (other.tag == "Death")
         {
             isDead = true;
         }
@@ -667,7 +619,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(onWall)
+        if (onWall)
         {
             if (other.tag == "LeftCorner")
             {

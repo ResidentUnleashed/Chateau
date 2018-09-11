@@ -28,6 +28,10 @@ public class BrokenMove : MonoBehaviour
     [Tooltip("The amount of time it takes to rotate")]
     [SerializeField]
     private float rotateTime = 1.0f;
+    [SerializeField]
+    private GameObject m_model = null;
+    [SerializeField]
+    private GameObject shadow = null;
     #endregion
 
     #region Private vars
@@ -36,6 +40,7 @@ public class BrokenMove : MonoBehaviour
     private Vector3 direction = Vector3.zero;
     private Vector3 localMove;
     private Vector3 respawnPos = Vector3.zero;
+    private Vector3 vel;
     private Quaternion oldRot;
     private Quaternion targetRot;
     private Rigidbody rb;
@@ -112,10 +117,7 @@ public class BrokenMove : MonoBehaviour
     }
     #endregion
 
-    private GameObject wallIAmOn;
-
-    public GameObject m_model = null;
-    public GameObject shadow = null;
+    
 
     void Awake()
     {
@@ -156,7 +158,6 @@ public class BrokenMove : MonoBehaviour
         {
             //Restore movement
             canMove = true;
-            //playerRotation.enabled = true;
         }
 
         if (fallOff)
@@ -184,41 +185,6 @@ public class BrokenMove : MonoBehaviour
             transform.rotation = Quaternion.identity;
             isDead = false;
         }
-
-        //Animations
-        if (inputX > 0.0f || inputY > 0.0f)
-        {
-            if (animator != null)
-            {
-                animator.SetBool("IsWalking", true);
-            }
-        }
-        else
-        {
-            if (animator != null)
-            {
-                animator.SetBool("IsWalking", false);
-            }
-        }
-
-        if (raycastDetection.InShadow)
-        {
-            if (animator != null)
-            {
-                animator.SetBool("IsFlat", true);
-                animator.SetBool("Flatten", true);
-                animator.SetBool("Unflatten", false);
-            }
-        }
-        else
-        {
-            if (animator != null)
-            {
-                animator.SetBool("IsFlat", false);
-                animator.SetBool("Flatten", false);
-                animator.SetBool("Unflatten", true);
-            }
-        }
         #endregion
 
         //Raycasting to detect wall
@@ -236,23 +202,41 @@ public class BrokenMove : MonoBehaviour
             Vector3 verticalMove = Vector3.zero;
             Vector3 moveDir = Vector3.zero;
 
-            Vector3 vel = transform.forward * inputY + transform.right * inputX;
-            vel *= Time.deltaTime * 100;
-           moveDir = vel;
 
+
+            if (onWall)
+            {
+                //Wall relative movement
+                Vector3 velY = Vector3.up * inputY;// * Time.deltaTime * 100;
+                Vector3 velX = new Vector3(-transform.up.z, 0, transform.up.x ) * inputX;
+                vel = Vector3.Normalize(velX + velY);
+                vel *= Time.deltaTime * 100;
+
+            }
+            else
+            {
+                // This is character relative movement
+                // vel = transform.forward * inputY + transform.right * inputX;
+                // vel *= Time.deltaTime * 100;
+
+                //Camera relative movement
+                vel = Camera.main.transform.rotation * (new Vector3(inputX,0.0f,inputY));
+                vel.y = 0;
+                vel.Normalize();
+                vel *= Time.deltaTime * 100;
+            }
+
+            //Model rotation
             m_model.gameObject.transform.LookAt(transform.position + vel);
 
             shadow.transform.localRotation = Quaternion.Euler(new Vector3(0, Vector3.SignedAngle(transform.forward, m_model.gameObject.transform.forward, transform.up), 0));
 
-            //shadow.gameObject.transform.LookAt(transform.position + vel);
-            //moveDir = new Vector3(inputX, 0, inputY).normalized;
+            //Update move direction
+            moveDir = vel;
 
-            //Vector3 moveDir = new Vector3(inputX, 0, inputY).normalized;
+            //Smooth the movement
             Vector3 targetMoveAmount = moveDir * walkSpeed;
             moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
-
-            //if ((inputX != 0 || inputY != 0) || !onWall)
-            //    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), Time.deltaTime * 10.0f);
         }
         else
         {
@@ -290,18 +274,26 @@ public class BrokenMove : MonoBehaviour
         if (canMove)
         {
             //Downwards detection
-            if (!Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f))
+            if (!Physics.Raycast(shadow.transform.position, -shadow.transform.up, out objectHit, 0.5f))
             {
                 fallOff = true;
-            
+
                 if (onGround && !rotateToZero)
                 {
                     onGround = false;
                 }
             }
+            else
+            {
+                if(objectHit.transform.tag == "Floor")
+                {
+                    onWall = false;
+                    onGround = true;
+                }
+            }
 
             //Up
-            if (Physics.Raycast(transform.position, transform.up, out objectHit, 0.5f) && changeForm.IsLittle)
+            if (Physics.Raycast(shadow.transform.position, shadow.transform.up, out objectHit, 0.5f) && changeForm.IsLittle)
             {
                 if (!onWall)
                 {
@@ -324,7 +316,7 @@ public class BrokenMove : MonoBehaviour
             }
 
             //Forward
-            else if (Physics.Raycast(transform.position, transform.forward, out objectHit, wallDetection) && inputY > 0 && changeForm.IsLittle)
+            else if (Physics.Raycast(shadow.transform.position, shadow.transform.forward, out objectHit, wallDetection) && (inputY != 0 || inputX != 0) && changeForm.IsLittle)
             {
                 Debug.Log("Forward Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, transform.forward, Color.blue);
@@ -335,7 +327,6 @@ public class BrokenMove : MonoBehaviour
                 {
                     direction = objectHit.normal.normalized;
                     detectFloor = false;
-                    wallIAmOn = objectHit.collider.gameObject;
                 }
                 else if (objectHit.transform.tag == "Floor")
                 {
@@ -344,67 +335,8 @@ public class BrokenMove : MonoBehaviour
                 }
             }
 
-            //Right
-            else if (Physics.Raycast(transform.position, transform.right, out objectHit, wallDetection) && inputX > 0 && changeForm.IsLittle)
-            {
-                Debug.Log("Right Raycast on: " + objectHit.collider);
-                Debug.DrawRay(transform.position, transform.right, Color.blue);
-                canRotate = true;
-
-                //If hit wall or floor, change direction to the normal of the hit object
-                if (objectHit.transform.tag == "Wall")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = false;
-                }
-                else if (objectHit.transform.tag == "Floor")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = true;
-                }
-            }
-
-            //Back
-            else if (Physics.Raycast(transform.position, -transform.forward, out objectHit, wallDetection) && inputY < 0 && changeForm.IsLittle)
-            {
-                Debug.Log("Back Raycast on: " + objectHit.collider);
-                Debug.DrawRay(transform.position, -transform.forward, Color.blue);
-                canRotate = true;
-
-                //If hit wall or floor, change direction to the normal of the hit object
-                if (objectHit.transform.tag == "Wall")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = false;
-                }
-                else if (objectHit.transform.tag == "Floor")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = true;
-                }
-            }
-
-            //Left
-            else if (Physics.Raycast(transform.position, -transform.right, out objectHit, wallDetection) && inputX < 0 && changeForm.IsLittle)
-            {
-                Debug.Log("Left Raycast on: " + objectHit.collider);
-                Debug.DrawRay(transform.position, -transform.right, Color.blue);
-                canRotate = true;
-
-                //If hit wall or floor, change direction to the normal of the hit object
-                if (objectHit.transform.tag == "Wall")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = false;
-                }
-                else if (objectHit.transform.tag == "Floor")
-                {
-                    direction = objectHit.normal.normalized;
-                    detectFloor = true;
-                }
-            }
             //Down
-            else if (Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f) && !onWall && !onGround && changeForm.IsLittle)
+            else if (Physics.Raycast(shadow.transform.position, -shadow.transform.up, out objectHit, 0.5f) && !onWall && !onGround && changeForm.IsLittle)
             {
                 Debug.Log("Downwards Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, transform.forward, Color.blue);
@@ -429,7 +361,6 @@ public class BrokenMove : MonoBehaviour
                 canRotate = false;
             }
         }
-        Debug.Log(wallIAmOn);
     }
 
     void FixedUpdate()
