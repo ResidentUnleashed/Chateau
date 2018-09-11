@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 462384893}
   - component: {fileID: 462384895}
   m_Layer: 9
-  m_Name: CameraTrigger_S2R
+  m_Name: CameraTrigger_S2E
   m_TagString: MoveCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1050,7 +1050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576656021}
   m_Layer: 9
-  m_Name: CameraTargetRight
+  m_Name: CameraTargetExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2485,7 +2485,7 @@ GameObject:
   - component: {fileID: 1544746154}
   - component: {fileID: 1544746156}
   m_Layer: 9
-  m_Name: CameraTrigger_R2S
+  m_Name: CameraTrigger_E2S
   m_TagString: MoveCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

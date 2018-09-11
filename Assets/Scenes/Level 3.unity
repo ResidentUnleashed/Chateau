@@ -1395,11 +1395,6 @@ Prefab:
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 376456257}
-    - target: {fileID: 114482801352045242, guid: b2c12c024e8dd524d875c0b31e99edab,
-        type: 2}
-      propertyPath: lerpSpeed
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2c12c024e8dd524d875c0b31e99edab, type: 2}
   m_IsPrefabParent: 0
