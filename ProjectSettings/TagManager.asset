@@ -9,6 +9,7 @@ TagManager:
   - MoveCamera
   - Blocker
   - Roof
+  - Death
   layers:
   - Default
   - TransparentFX
