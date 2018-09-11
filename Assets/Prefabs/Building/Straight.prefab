@@ -62,6 +62,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1446509256535786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4286872190439424}
+  - component: {fileID: 33754225649904652}
+  - component: {fileID: 64807208994628902}
+  m_Layer: 0
+  m_Name: Quad (4)
+  m_TagString: Roof
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1595404309840546
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +131,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4286872190439424
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446509256535786}
+  m_LocalRotation: {x: 0.0000011026859, y: 0.7071048, z: 0.70710886, w: -0.0000010430813}
+  m_LocalPosition: {x: 2.0399942, y: -0.007999897, z: 1.9999828}
+  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4952482312279140}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!4 &4298272407254000
 Transform:
   m_ObjectHideFlags: 1
@@ -181,6 +211,7 @@ Transform:
   - {fileID: 4533584251046116}
   - {fileID: 4877090131758204}
   - {fileID: 4998582414367870}
+  - {fileID: 4286872190439424}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -267,6 +298,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1738498381120456}
   m_Mesh: {fileID: 4300000, guid: 5505fa54fddc93e4b85c00dc7bf5ea64, type: 3}
+--- !u!33 &33754225649904652
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446509256535786}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33767029620707568
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -294,6 +332,20 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1196036133517326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &64807208994628902
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446509256535786}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

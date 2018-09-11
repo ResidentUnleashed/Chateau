@@ -9,6 +9,9 @@ public class ChangeCameraTarget : MonoBehaviour
     private float lerpSpeed = 1.0f;
     [SerializeField]
     private GameObject gameCamera;
+    [Tooltip("The range needed to jump to the correct position.")]
+    [SerializeField]
+    private float range = 0.1f;
 
 
     private Transform newTarget = null;
@@ -27,7 +30,7 @@ public class ChangeCameraTarget : MonoBehaviour
             gameCamera.transform.position = Vector3.MoveTowards(startPos, newTarget.position, t);
 
             //In range
-            if(Vector3.Distance(gameCamera.transform.position, newTarget.position) < 0.1f)
+            if(Vector3.Distance(gameCamera.transform.position, newTarget.position) < range)
             {
                 //Hit target
                 gameCamera.transform.position = newTarget.position;

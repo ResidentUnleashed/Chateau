@@ -17,17 +17,15 @@ public class MovingPlatform : MonoBehaviour {
     [SerializeField]
     private float maxWait = 1.0f;
 
+    [SerializeField]
     private Transform startPos;
-    private float waitTimer;
-    private bool moveTowardsTarget = true;
-    private bool wait = false;
 
-	// Use this for initialization
-	void Start ()
-    {
-        startPos = transform;
-	}
-	
+
+    private float waitTimer;
+    private bool wait = false;
+    private bool hasSwitchedPos = false;
+
+
 	// Update is called once per frame
 	void Update ()
     {
@@ -42,14 +40,27 @@ public class MovingPlatform : MonoBehaviour {
         if (wait)
         {
             waitTimer += Time.deltaTime;
+
+            if(!hasSwitchedPos)
+            {
+                //Switch the start pos and the end pos
+                Transform tempTrans = target;
+
+                target = startPos;
+                startPos = tempTrans;
+
+                hasSwitchedPos = true;
+            }
+            
         }
-        else if (moveTowardsTarget && !wait)
+        else 
         {
             waitTimer = 0.0f;
+            hasSwitchedPos = false;
             
 
             //Move to new destination
-            transform.position = Vector3.MoveTowards(startPos.position, target.position, speed);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed);
 
             //In range
             if (Vector3.Distance(transform.position, target.position) < range)
@@ -57,27 +68,7 @@ public class MovingPlatform : MonoBehaviour {
                 //Hit target and wait
                 transform.position = target.position;
                 wait = true;
-                moveTowardsTarget = false;
             }
         }
-        else if (!moveTowardsTarget && !wait)
-        {
-            waitTimer = 0.0f;
-
-            //Move to new destination
-            transform.position = Vector3.MoveTowards(target.position, startPos.position, speed);
-
-            //In range
-            if (Vector3.Distance(transform.position, startPos.position) < range)
-            {
-                //Hit target and wait
-                transform.position = startPos.position;
-                wait = true;
-                moveTowardsTarget = true;
-            }
-        }
-        
-        
-
     }
 }
