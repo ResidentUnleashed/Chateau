@@ -480,8 +480,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209023883916028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: -0, y: 0.8660245, z: -0, w: 0.50000167}
+  m_LocalPosition: {x: -5.51, y: -2.15, z: 17.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4958263068394878}
@@ -489,7 +489,7 @@ Transform:
   - {fileID: 4346937591675120}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 120.00001, z: 0}
 --- !u!4 &4929801291392532
 Transform:
   m_ObjectHideFlags: 1
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209023883916028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99b542b261aa04b4eb28a3e9adba3fc3, type: 3}
   m_Name: 
@@ -595,6 +595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0330593d2c6ca4685c1af09b805732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lerpSpeed: 1
+  gameCamera: {fileID: 0}
+  range: 0.1
 --- !u!114 &114611102140808128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -661,12 +664,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209023883916028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eed6f3465c46b234699d83704126fb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
+  walkSpeed: 2
   wallDetection: 0.5
   rotSpeed: 1
   attachRefresh: 0.3
@@ -674,6 +677,8 @@ MonoBehaviour:
   anchorDistance: -1
   anchorOffset: -1
   rotateTime: 1
+  m_model: {fileID: 1324507096781070}
+  shadow: {fileID: 1662393950042648}
 --- !u!119 &119234708864138346
 Projector:
   m_ObjectHideFlags: 1
