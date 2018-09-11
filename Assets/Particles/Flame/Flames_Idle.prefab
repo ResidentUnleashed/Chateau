@@ -2698,7 +2698,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 108242537349733132, guid: bb87ff8023277e5449c2d1042aca11e7, type: 2}
+    light: {fileID: 108242537349733132, guid: 588f663fc27a77641944336c4a280ecf, type: 2}
     randomDistribution: 1
     color: 1
     range: 1
@@ -6908,7 +6908,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3e6dcd27f60e674581cc48bd509b609, type: 2}
+  - {fileID: 2100000, guid: 7c294e33531aebe438922a6e01561458, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
