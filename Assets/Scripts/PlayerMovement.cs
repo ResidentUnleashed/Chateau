@@ -73,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
     private bool rightCorner = false;
     private bool isDead = false;
     private bool respawning = false;
+    private bool onRoof = false;
     #endregion
 
     #region Get Set
@@ -211,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-            if (onWall)
+            if (onWall && !onRoof)
             {
                 //Wall relative movement
                 Vector3 velY = Vector3.up * inputY;// * Time.deltaTime * 100;
@@ -304,8 +305,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (objectHit.transform.tag == "Floor")
                 {
+                    onRoof = false;
                     onWall = false;
                     onGround = true;
+                }
+
+                if(objectHit.transform.tag == "Roof")
+                {
+                    onWall = false;
+                    onGround = false;
+                    onRoof = true;
                 }
             }
 
