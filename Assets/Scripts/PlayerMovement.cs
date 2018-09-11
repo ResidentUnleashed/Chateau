@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     private GameObject m_model = null;
     [SerializeField]
     private GameObject shadow = null;
+    [SerializeField]
+    private Animator pipAni = null;
     #endregion
 
     #region Private vars
@@ -231,6 +233,16 @@ public class PlayerMovement : MonoBehaviour
                 vel *= Time.deltaTime * 100;
             }
 
+            //Animations
+            if (vel != Vector3.zero)
+            {
+                pipAni.SetBool("isIdle", false);
+            }
+            else
+            {
+                pipAni.SetBool("isIdle", true);
+            }
+
             //Model rotation
             m_model.gameObject.transform.LookAt(transform.position + vel);
 
@@ -341,7 +353,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Down
-            else if (Physics.Raycast(shadow.transform.position, -shadow.transform.up, out objectHit, 0.5f) && !onWall && !onGround && changeForm.IsLittle)
+            else if (Physics.Raycast(transform.position, -transform.up, out objectHit, 0.5f) && !onWall && !onGround && changeForm.IsLittle)
             {
                 Debug.Log("Downwards Raycast on: " + objectHit.collider);
                 Debug.DrawRay(transform.position, transform.forward, Color.blue);

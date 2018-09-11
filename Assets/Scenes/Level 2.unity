@@ -461,6 +461,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95517627942249772, guid: b2c12c024e8dd524d875c0b31e99edab,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 529a9898bab142342a103cc5156e27cf, type: 2}
+    - target: {fileID: 114916170685847044, guid: b2c12c024e8dd524d875c0b31e99edab,
+        type: 2}
+      propertyPath: pipAni
+      value: 
+      objectReference: {fileID: 1872461241}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2c12c024e8dd524d875c0b31e99edab, type: 2}
   m_IsPrefabParent: 0
@@ -724,6 +734,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4605725115934754, guid: 959b600cfc2fb9249b7a42a136726ce6,
     type: 2}
   m_PrefabInternal: {fileID: 449385210}
+--- !u!95 &1872461241 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95517627942249772, guid: b2c12c024e8dd524d875c0b31e99edab,
+    type: 2}
+  m_PrefabInternal: {fileID: 976739610}
 --- !u!1001 &1952030712
 Prefab:
   m_ObjectHideFlags: 0
