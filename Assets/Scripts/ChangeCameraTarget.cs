@@ -52,7 +52,7 @@ public class ChangeCameraTarget : MonoBehaviour
             if (transform.rotation != targetRot) /* Does not equal our target rotation */
             {
                 //Slerp towards rotation
-                transform.rotation = Quaternion.Slerp(oldRot, targetRot, rotateTimer * rotSpeed);
+                gameCamera.transform.rotation = Quaternion.Slerp(oldRot, targetRot, rotateTimer * rotSpeed);
             }
         }
 
