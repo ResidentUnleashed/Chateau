@@ -59,7 +59,7 @@ public class ChangeCameraTarget : MonoBehaviour
         if(rotateTimer > 1.0f)
         {
             rotate = false;
-            transform.rotation = targetRot;
+            gameCamera.transform.rotation = targetRot;
             rotateTimer = 0.0f;
         }
     }
