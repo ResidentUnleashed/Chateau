@@ -12,12 +12,18 @@ public class ChangeCameraTarget : MonoBehaviour
     [Tooltip("The range needed to jump to the correct position.")]
     [SerializeField]
     private float range = 0.1f;
+    [SerializeField]
+    private float rotSpeed = 2.0f;
 
 
     private Transform newTarget = null;
     private bool moveTowards = false;
     private float t;
     private Vector3 startPos;
+    private bool rotate;
+    private float rotateTimer;
+    private Quaternion oldRot;
+    private Quaternion targetRot;
 
     private void Update()
     {
@@ -37,6 +43,25 @@ public class ChangeCameraTarget : MonoBehaviour
                 moveTowards = false;
             }
         }
+
+        if (rotate)
+        { 
+
+            rotateTimer += Time.deltaTime;
+
+            if (transform.rotation != targetRot) /* Does not equal our target rotation */
+            {
+                //Slerp towards rotation
+                transform.rotation = Quaternion.Slerp(oldRot, targetRot, rotateTimer * rotSpeed);
+            }
+        }
+
+        if(rotateTimer > 1.0f)
+        {
+            rotate = false;
+            transform.rotation = targetRot;
+            rotateTimer = 0.0f;
+        }
     }
 
 
@@ -46,15 +71,22 @@ public class ChangeCameraTarget : MonoBehaviour
         {
             t = 0.0f;
 
+            //Store our old rotation
+            oldRot = transform.rotation;
+
             //Get our starting pos
             startPos = gameCamera.transform.position;
 
             //Get the child transform and we can switch target
             newTarget = other.transform.GetChild(0).gameObject.transform;
 
-            if(gameCamera.transform != newTarget)
+            //Get the child rotation and we can alter rotation
+            targetRot = other.transform.GetChild(0).gameObject.transform.rotation;
+
+            if (gameCamera.transform != newTarget)
             {
                 moveTowards = true;
+                rotate = true;
             }
         }
     }
