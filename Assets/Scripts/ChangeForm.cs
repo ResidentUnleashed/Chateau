@@ -23,7 +23,8 @@ public class ChangeForm : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		if (rayDet.InShadow == true)
         {
             if(Input.GetButtonDown("Fire1") && !isLittle && !playerMovement.OnWall)
@@ -44,6 +45,7 @@ public class ChangeForm : MonoBehaviour {
         {
             bigMode.SetActive(true);
             littleMode.SetActive(false);
+            isLittle = false;
         }
 	}
 }
