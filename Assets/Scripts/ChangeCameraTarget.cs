@@ -88,7 +88,7 @@ public class ChangeCameraTarget : MonoBehaviour
             if (gameCamera.transform != newTarget)
             {
                 moveTowards = true;
-                rotate = true;
+                //rotate = true;
             }
         }
     }

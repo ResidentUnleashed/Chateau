@@ -480,8 +480,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209023883916028}
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.7071079}
-  m_LocalPosition: {x: 0, y: 3.09, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 3, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4958263068394878}
@@ -489,7 +489,7 @@ Transform:
   - {fileID: 4346937591675120}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 120.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4929801291392532
 Transform:
   m_ObjectHideFlags: 1
@@ -541,7 +541,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1324507096781070}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: fb10a2f297563ac49a9e8a3b362c40ee, type: 3}
+  m_Avatar: {fileID: 9000000, guid: e97c751145690e044b8df0167f9dc984, type: 3}
   m_Controller: {fileID: 9100000, guid: 529a9898bab142342a103cc5156e27cf, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -598,6 +598,8 @@ MonoBehaviour:
   lerpSpeed: 10
   gameCamera: {fileID: 0}
   range: 0.1
+  rotSpeed: 2
+  maxRotateTime: 1
 --- !u!114 &114611102140808128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -786,7 +788,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: fb10a2f297563ac49a9e8a3b362c40ee, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e97c751145690e044b8df0167f9dc984, type: 3}
   m_Bones:
   - {fileID: 4231525121671808}
   - {fileID: 4182918694668294}
