@@ -14,6 +14,8 @@ public class ChangeCameraTarget : MonoBehaviour
     private float range = 0.1f;
     [SerializeField]
     private float rotSpeed = 2.0f;
+    [SerializeField]
+    private float maxRotateTime = 1.0f;
 
 
     private Transform newTarget = null;
@@ -56,7 +58,7 @@ public class ChangeCameraTarget : MonoBehaviour
             }
         }
 
-        if(rotateTimer > 1.0f)
+        if(rotateTimer > maxRotateTime)
         {
             rotate = false;
             gameCamera.transform.rotation = targetRot;
