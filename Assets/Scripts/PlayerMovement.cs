@@ -311,6 +311,11 @@ public class PlayerMovement : MonoBehaviour
                     onWall = false;
                     onGround = true;
                 }
+
+                if (objectHit.transform.tag == "Floor" && !downDetect)
+                {
+                    onRoof = true;
+                }
             }
 
             //Up
@@ -510,6 +515,7 @@ public class PlayerMovement : MonoBehaviour
                 changeRotateDir = true;
                 direction = Vector3.up;
                 onWall = false;
+                onRoof = false;
                 rotateToZero = true;
                 RotateDirection();
             }
@@ -525,6 +531,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, 1.0f);
             changeRotateDir = true;
             direction = Vector3.up;
+            onRoof = false;
             onWall = false;
             rotateToZero = true;
             RotateDirection();
@@ -542,7 +549,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FallOffWall()
     {
-        if (onWall && fallOff)
+        if ((onWall || onRoof) && fallOff)
         {
             //Player falls and rotates back to land on ground
             rb.AddForce(Vector3.down);
@@ -550,6 +557,7 @@ public class PlayerMovement : MonoBehaviour
             changeRotateDir = true;
             direction = Vector3.up;
             onWall = false;
+            onRoof = false;
             rotateToZero = true;
             RotateDirection();
 
