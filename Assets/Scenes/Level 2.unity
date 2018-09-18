@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTimeBetweenScenes: 2
-  sceneName: Level 5
+  sceneName: Level 3
 --- !u!1001 &1695192831
 Prefab:
   m_ObjectHideFlags: 0
