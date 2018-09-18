@@ -312,7 +312,7 @@ public class PlayerMovement : MonoBehaviour
                     onGround = true;
                 }
 
-                if (objectHit.transform.tag == "Floor" && !downDetect)
+                if (objectHit.transform.tag == "Roof" && !downDetect)
                 {
                     onRoof = true;
                 }
