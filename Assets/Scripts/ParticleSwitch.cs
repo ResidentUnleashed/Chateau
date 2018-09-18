@@ -5,10 +5,7 @@ using UnityEngine;
 public class ParticleSwitch : MonoBehaviour {
 
     [SerializeField]
-    GameObject[] onList;
-
-    [SerializeField]
-    GameObject[] offList;
+    GameObject[] objectList;
 
 
 
@@ -16,14 +13,9 @@ public class ParticleSwitch : MonoBehaviour {
     {
         if (other.transform.tag == "Player")
         {
-            for (int i = 0; i < onList.Length; i++)
+            for (int i = 0; i < objectList.Length; i++)
             {
-                onList[i].SetActive(true);
-            }
-
-            for (int c = 0; c < offList.Length; c++)
-            {
-                offList[c].SetActive(false);
+                objectList[i].SetActive(true);
             }
         }
     }
@@ -32,14 +24,9 @@ public class ParticleSwitch : MonoBehaviour {
     {
         if (other.transform.tag == "Player")
         {
-            for (int i = 0; i < onList.Length; i++)
+            for (int i = 0; i < objectList.Length; i++)
             {
-                onList[i].SetActive(false);
-            }
-
-            for (int c = 0; c < offList.Length; c++)
-            {
-                offList[c].SetActive(false);
+                objectList[i].SetActive(false);
             }
         }
     }
