@@ -10,6 +10,7 @@ TagManager:
   - Blocker
   - Roof
   - Death
+  - ParticleDisplay
   layers:
   - Default
   - TransparentFX
