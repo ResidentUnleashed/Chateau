@@ -379,6 +379,11 @@ public class PlayerMovement : MonoBehaviour
                     downDetect = true;
                     detectFloor = false;
                 }
+                else if(objectHit.transform.tag == "Roof")
+                {
+                    downDetect = true;
+                    detectFloor = false;
+                }
                 else if (objectHit.transform.tag == "Floor")
                 {
                     downDetect = false;
@@ -505,7 +510,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DetachOffWall()
     {
-        if (onWall && !canRotate && !downDetect && !rightCorner && !leftCorner)
+        if ((onWall || onRoof) && !canRotate && !downDetect && !rightCorner && !leftCorner)
         {
             if (Input.GetButtonDown("Fire1"))
             {
