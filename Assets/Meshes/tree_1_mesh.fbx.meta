@@ -1,21 +1,34 @@
 fileFormatVersion: 2
-guid: e9651ae33256a9b4b9469e6a187dc3dd
-timeCreated: 1534905264
+guid: c3b996f478a6431409f095318befa347
+timeCreated: 1537240585
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Flower
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Flower1
-    7400000: Flower_Wave
+    100000: joint1
+    100002: joint2
+    100004: joint3
+    100006: joint4
+    100008: joint5
+    100010: joint6
+    100012: tree_1
+    100014: //RootNode
+    400000: joint1
+    400002: joint2
+    400004: joint3
+    400006: joint4
+    400008: joint5
+    400010: joint6
+    400012: tree_1
+    400014: //RootNode
+    2100000: lambert1
+    4300000: tree_1
+    7400000: Tree_1_Wave
     9500000: //RootNode
+    13700000: tree_1
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -41,10 +54,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Flower_Wave
+      name: Tree_1_Wave
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 50
+      lastFrame: 100
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
