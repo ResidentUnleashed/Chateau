@@ -160,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
             rb.useGravity = true;
         }
 
-        if (controlStaticTimer > (rotateTime + 0.2f))
+        if (controlStaticTimer > (rotateTime + 0.0001f))
         {
             //Restore movement
             canMove = true;
