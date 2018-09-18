@@ -234,15 +234,19 @@ public class PlayerMovement : MonoBehaviour
                 vel *= Time.deltaTime * 100;
             }
 
-            //Animations
-            if (vel != Vector3.zero)
+            if(animator.gameObject.activeSelf == true)
             {
-                pipAni.SetBool("isIdle", false);
+                //Animations
+                if (vel != Vector3.zero)
+                {
+                    pipAni.SetBool("isIdle", false);
+                }
+                else
+                {
+                    pipAni.SetBool("isIdle", true);
+                }
             }
-            else
-            {
-                pipAni.SetBool("isIdle", true);
-            }
+            
 
             //Model rotation
             m_model.gameObject.transform.LookAt(transform.position + vel);
