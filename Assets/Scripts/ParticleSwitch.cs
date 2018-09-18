@@ -40,4 +40,20 @@ public class ParticleSwitch : MonoBehaviour {
             }
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "ParticleDisplay")
+        {
+            for (int i = 0; i < onList.Length; i++)
+            {
+                onList[i].SetActive(false);
+            }
+
+            for (int c = 0; c < offList.Length; c++)
+            {
+                offList[c].SetActive(false);
+            }
+        }
+    }
 }
