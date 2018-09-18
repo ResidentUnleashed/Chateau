@@ -125,8 +125,6 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
-
-
     void Awake()
     {
         //Obtain components
@@ -234,7 +232,7 @@ public class PlayerMovement : MonoBehaviour
                 vel *= Time.deltaTime * 100;
             }
 
-            if(animator.gameObject.activeSelf == true)
+            if(pipAni.gameObject.activeSelf == true)
             {
                 //Animations
                 if (vel != Vector3.zero)
@@ -477,7 +475,6 @@ public class PlayerMovement : MonoBehaviour
             playerRotation.enabled = false;
             rotTimer = 0.0f;
             oldRot = transform.rotation;
-
             RotateDirection();
 
             rotate = true;
