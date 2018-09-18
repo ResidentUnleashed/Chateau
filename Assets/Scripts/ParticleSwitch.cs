@@ -14,7 +14,7 @@ public class ParticleSwitch : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "ParticleDisplay")
+        if (other.transform.tag == "Player")
         {
             for (int i = 0; i < onList.Length; i++)
             {
@@ -26,24 +26,11 @@ public class ParticleSwitch : MonoBehaviour {
                 offList[c].SetActive(false);
             }
         }
-
-        if(other.transform.tag == "MoveCamera")
-        {
-            for (int i = 0; i < onList.Length; i++)
-            {
-                onList[i].SetActive(false);
-            }
-
-            for (int c = 0; c < offList.Length; c++)
-            {
-                offList[c].SetActive(false);
-            }
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "ParticleDisplay")
+        if (other.transform.tag == "Player")
         {
             for (int i = 0; i < onList.Length; i++)
             {

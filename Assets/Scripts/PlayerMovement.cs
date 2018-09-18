@@ -425,7 +425,7 @@ public class PlayerMovement : MonoBehaviour
     private void RotatePlayer()
     {
         //Mounting wall from down raycast
-        if (Input.GetButtonDown("Fire1") && !onWall && downDetect && raycastDetection.InShadow == true && changeForm.IsLittle)
+        if (Input.GetButtonDown("Fire1") && !onWall && !onRoof && downDetect && raycastDetection.InShadow == true && changeForm.IsLittle)
         {
             onWall = true;
             fallOff = false;
