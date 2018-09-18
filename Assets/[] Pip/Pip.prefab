@@ -526,7 +526,7 @@ Rigidbody:
   m_GameObject: {fileID: 1209023883916028}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -673,12 +673,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 2
   wallDetection: 0.5
-  rotSpeed: 1
+  rotSpeed: 3
   attachRefresh: 0.3
   anchor: {fileID: 0}
   anchorDistance: -1
   anchorOffset: -1
-  rotateTime: 1
+  rotateTime: 0.3
   m_model: {fileID: 1324507096781070}
   shadow: {fileID: 1662393950042648}
   pipAni: {fileID: 95517627942249772}
@@ -748,7 +748,7 @@ CapsuleCollider:
   m_Radius: 0.36
   m_Height: 0.74
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -0}
 --- !u!137 &137802392412041072
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
