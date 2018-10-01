@@ -575,10 +575,6 @@ Prefab:
       propertyPath: m_Name
       value: Corner (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1781797789518654, guid: 7c0616b6d7ffc644fb73c8bae0cbb10c, type: 2}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c0616b6d7ffc644fb73c8bae0cbb10c, type: 2}
   m_IsPrefabParent: 0

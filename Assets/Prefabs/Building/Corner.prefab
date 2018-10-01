@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 65954429556226328}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,8 +249,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1664575276832032}
-  m_LocalRotation: {x: -0, y: -0.000043630596, z: -0, w: 1}
-  m_LocalPosition: {x: -3.042871, y: 2.4300003, z: 6.1499863}
+  m_LocalRotation: {x: -0, y: 0.70707494, z: -0, w: 0.70713866}
+  m_LocalPosition: {x: -11.042871, y: 2.4300003, z: 6.149288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4183580162975284}
@@ -304,7 +304,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7f8197d2e6589ce4c8c646fe2539b169, type: 2}
+  - {fileID: 2100000, guid: 869d9104722a1904890c2b7bbd807ba5, type: 2}
   - {fileID: 2100000, guid: 0314815313a98694a8939b72bb2c0177, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
