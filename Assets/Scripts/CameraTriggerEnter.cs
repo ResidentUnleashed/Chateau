@@ -35,12 +35,14 @@ public class CameraTriggerEnter : MonoBehaviour {
             {
                 animator.SetBool("Pos1", true);
                 animator.SetBool("Pos2", false);
+                animator.SetBool("ToIdle", false);
                 startTimer = true;
             }
             else
             {
                 animator.SetBool("Pos1", false);
                 animator.SetBool("Pos2", true);
+                animator.SetBool("ToIdle", false);
                 startTimer = true;
             }
         }
