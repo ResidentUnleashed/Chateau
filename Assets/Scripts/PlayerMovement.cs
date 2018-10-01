@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     private GameObject shadow = null;
     [SerializeField]
     private Animator pipAni = null;
+    [SerializeField]
+    private float drag = 3.0f;
     #endregion
 
     #region Private vars
@@ -139,6 +141,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         #region Small if checks
+
+        if(onWall || onGround)
+        {
+            rb.drag = drag;
+        }
+        else
+        {
+            rb.drag = 0;
+        }
+
         if (anchorCount == 1 && !onGround)
         {
             anch = Instantiate(anchor, transform.position + new Vector3(anchorOffset, 0, anchorDistance), Quaternion.identity);
