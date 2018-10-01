@@ -247,6 +247,11 @@ public class PlayerMovement : MonoBehaviour
             if(pipAni.gameObject.activeSelf == true)
             {
                 pipAni.SetBool("isMelding", false);
+                
+                if(!onWall && !onRoof && Input.GetButtonDown("Fire1"))
+                {
+                    pipAni.SetBool("isMelding", true);
+                }
 
                 //Animations
                 if (vel != Vector3.zero)
