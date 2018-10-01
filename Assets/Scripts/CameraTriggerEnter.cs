@@ -15,7 +15,7 @@ public class CameraTriggerEnter : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.tag == "CamAni")
+        if(other.transform.tag == "MoveCamera")
         {
             animator.enabled = true;
         }

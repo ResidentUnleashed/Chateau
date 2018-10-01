@@ -5791,6 +5791,11 @@ Prefab:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114916170685847044, guid: b2c12c024e8dd524d875c0b31e99edab,
+        type: 2}
+      propertyPath: drag
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2c12c024e8dd524d875c0b31e99edab, type: 2}
   m_IsPrefabParent: 0
