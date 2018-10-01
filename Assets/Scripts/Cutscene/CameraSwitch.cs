@@ -16,11 +16,31 @@ public class CameraSwitch : MonoBehaviour {
 
 
     private float timer;
-
+    private int currentCamera = 0;
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+        timer += Time.deltaTime;
+
+        if(timer > 5.0f && currentCamera == 0)
+        {
+            cameraList[0].SetActive(false);
+            cameraList[1].SetActive(true);
+
+            currentCamera = 1;
+        }
+        else if (timer > 10.0f && currentCamera == 1)
+        {
+            cameraList[1].SetActive(false);
+            cameraList[2].SetActive(true);
+
+            currentCamera = 2;
+        }
+        else if (timer > 15.0f && currentCamera == 2)
+        {
+            cameraList[2].SetActive(false);
+            cameraList[3].SetActive(true);
+        }
+    }
 }
