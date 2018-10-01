@@ -246,6 +246,8 @@ public class PlayerMovement : MonoBehaviour
 
             if(pipAni.gameObject.activeSelf == true)
             {
+                pipAni.SetBool("isMelding", false);
+
                 //Animations
                 if (vel != Vector3.zero)
                 {
