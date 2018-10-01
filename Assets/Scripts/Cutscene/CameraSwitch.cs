@@ -7,11 +7,9 @@ public class CameraSwitch : MonoBehaviour {
     [SerializeField]
     private GameObject[] cameraList;
     [SerializeField]
-    private TowardsTarget scriptList;
+    private TowardsTarget[] scriptList;
     [SerializeField]
     private Animator greenPipAni;
-    [SerializeField]
-    private Animator greenPipAni2;
 
 
 
@@ -41,6 +39,22 @@ public class CameraSwitch : MonoBehaviour {
         {
             cameraList[2].SetActive(false);
             cameraList[3].SetActive(true);
+
+            currentCamera = 3;
+        }
+        else if (timer > 20.0f && currentCamera == 3)
+        {
+            cameraList[3].SetActive(false);
+            cameraList[4].SetActive(true);
+
+            currentCamera = 4;
+        }
+        else if (timer > 25.0f && currentCamera == 4)
+        {
+            cameraList[4].SetActive(false);
+            cameraList[5].SetActive(true);
+
+            currentCamera = 5;
         }
     }
 }
