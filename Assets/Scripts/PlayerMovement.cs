@@ -575,18 +575,6 @@ public class PlayerMovement : MonoBehaviour
                 Destroy(anch);
             }
         }
-        else if(fallOff)
-        {
-            //Player falls and rotates back to land on ground
-            rb.AddForce(Vector3.down);
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, 1.0f);
-            changeRotateDir = true;
-            direction = Vector3.up;
-            onWall = false;
-            onRoof = false;
-            rotateToZero = true;
-            RotateDirection();
-        }
     }
 
     private void RotateBack()

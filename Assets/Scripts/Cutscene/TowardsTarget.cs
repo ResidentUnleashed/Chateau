@@ -9,22 +9,24 @@ public class TowardsTarget : MonoBehaviour {
     private float range = 0.1f;
 
     [SerializeField]
-    private float speed = 3.0f;
+    private float speed = 1.0f;
 
     [SerializeField]
-    private Transform target;
+    private Transform endTarget;
 
     [SerializeField]
     private float maxWait = 1.0f;
 
     [SerializeField]
-    private Transform startPos;
+    private float rotateSpeed = 2.0f;
+
+    [SerializeField]
+    private Transform startTarget;
 
 
     private float waitTimer;
     private bool wait = false;
     private bool hasSwitchedPos = false;
-
 
     // Update is called once per frame
     void Update()
@@ -44,10 +46,10 @@ public class TowardsTarget : MonoBehaviour {
             if (!hasSwitchedPos)
             {
                 //Switch the start pos and the end pos
-                Transform tempTrans = target;
+                Transform tempTrans = endTarget;
 
-                target = startPos;
-                startPos = tempTrans;
+                endTarget = startTarget;
+                startTarget = tempTrans;
 
                 hasSwitchedPos = true;
             }
@@ -60,15 +62,21 @@ public class TowardsTarget : MonoBehaviour {
 
 
             //Move to new destination
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed);
+            transform.position = Vector3.MoveTowards(transform.position, endTarget.position, speed);
 
             //In range
-            if (Vector3.Distance(transform.position, target.position) < range)
+            if (Vector3.Distance(transform.position, endTarget.position) < range)
             {
                 //Hit target and wait
-                transform.position = target.position;
+                transform.position = endTarget.position;
                 wait = true;
             }
         }
+
+
+        //Look at the correct direction
+        Vector3 relativePos = endTarget.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(relativePos);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotateSpeed);
     }
 }
