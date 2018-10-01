@@ -11991,35 +11991,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1919404961966774, guid: c3dc400925de4fc4aa22e7bdabb6c702, type: 2}
-      propertyPath: m_TagString
-      value: Blocker
-      objectReference: {fileID: 0}
-    - target: {fileID: 1140147674991870, guid: c3dc400925de4fc4aa22e7bdabb6c702, type: 2}
-      propertyPath: m_TagString
-      value: Blocker
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114062540031487522, guid: c3dc400925de4fc4aa22e7bdabb6c702, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c3dc400925de4fc4aa22e7bdabb6c702, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1624641807 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1140147674991870, guid: c3dc400925de4fc4aa22e7bdabb6c702,
-    type: 2}
-  m_PrefabInternal: {fileID: 1624641806}
---- !u!114 &1624641808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1624641807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e254f410d49354781e5bdc360e0d8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxTimeBetweenScenes: 2
-  sceneName: Level 1
 --- !u!1 &1643295749
 GameObject:
   m_ObjectHideFlags: 0
