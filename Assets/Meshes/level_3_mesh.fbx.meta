@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: e5592121f58824640987739d913ac9bc
+timeCreated: 1537319325
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: brick_edging
+    100002: bridge
+    100004: castle_bottom
+    100006: castle_flag_tower
+    100008: castle_top
+    100010: //RootNode
+    100012: rock_flat
+    100014: supports
+    100016: tunnel_pointy_roof
+    400000: brick_edging
+    400002: bridge
+    400004: castle_bottom
+    400006: castle_flag_tower
+    400008: castle_top
+    400010: //RootNode
+    400012: rock_flat
+    400014: supports
+    400016: tunnel_pointy_roof
+    2100000: lambert110
+    2100002: lambert1
+    2100004: lambert107
+    2100006: tower1
+    2100008: bridge2
+    2100010: brick
+    2100012: lambert93
+    2300000: brick_edging
+    2300002: bridge
+    2300004: castle_bottom
+    2300006: castle_flag_tower
+    2300008: castle_top
+    2300010: rock_flat
+    2300012: supports
+    2300014: tunnel_pointy_roof
+    3300000: brick_edging
+    3300002: bridge
+    3300004: castle_bottom
+    3300006: castle_flag_tower
+    3300008: castle_top
+    3300010: rock_flat
+    3300012: supports
+    3300014: tunnel_pointy_roof
+    4300000: tunnel_pointy_roof
+    4300002: rock_flat
+    4300004: castle_top
+    4300006: castle_bottom
+    4300008: castle_flag_tower
+    4300010: bridge
+    4300012: brick_edging
+    4300014: supports
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
