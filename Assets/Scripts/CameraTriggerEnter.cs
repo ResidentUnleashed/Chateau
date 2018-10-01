@@ -11,7 +11,7 @@ public class CameraTriggerEnter : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.tag == "MoveCamera")
+        if(other.transform.tag == "CamAni")
         {
             if(isFoward)
             {
@@ -29,7 +29,7 @@ public class CameraTriggerEnter : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "MoveCamera")
+        if (other.transform.tag == "CamAni")
         {
             if (isFoward)
             {
