@@ -15,15 +15,7 @@ public class Spiral : MonoBehaviour {
     [SerializeField]
     private Transform[] targets;
 
-    [SerializeField]
-    private float maxWait = 1.0f;
 
-    private float rotateSpeed = 2.0f;
-
-
-
-    private float waitTimer;
-    private bool wait = false;
     private bool hasSwitchedPos = false;
     private Transform currTarget;
 
