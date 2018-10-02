@@ -16,6 +16,11 @@ public class CamSwitch : MonoBehaviour {
             vCamMain.SetActive(false);
             atStart = false;
             Debug.Log("YES");
+
+            for(int i = 0; i < vCamOther.Length; i++)
+            {
+                vCamOther[i].SetActive(false);
+            }
         }
     }
 }
