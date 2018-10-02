@@ -6,10 +6,13 @@ public class CameraTriggerEnter : MonoBehaviour {
 
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    private Animation ani;
 
     private bool isFoward = true;
     private bool startTimer = false;
     private float timer;
+
 
 
     private void Update()
@@ -22,7 +25,8 @@ public class CameraTriggerEnter : MonoBehaviour {
         if(timer >= 1.0f)
         {
             startTimer = false;
-            animator.SetBool("ToIdle", true);
+            ani.Stop("Cam1-E2S");
+            ani.Stop("Level 1 Camera");
             timer = 0.0f;
         }
     }
@@ -33,16 +37,12 @@ public class CameraTriggerEnter : MonoBehaviour {
         {
             if(isFoward)
             {
-                animator.SetBool("Pos1", true);
-                animator.SetBool("Pos2", false);
-                animator.SetBool("ToIdle", false);
+                ani.Play("Level 1 Camera");
                 startTimer = true;
             }
             else
             {
-                animator.SetBool("Pos1", false);
-                animator.SetBool("Pos2", true);
-                animator.SetBool("ToIdle", false);
+                ani.Play("Cam1-E2S");
                 startTimer = true;
             }
         }
