@@ -76,6 +76,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Pos2
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ToIdle
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102393454283574942}
   m_Solo: 0
@@ -123,6 +126,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Pos2
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ToIdle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102373558177620226}
@@ -197,7 +203,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Level 1 Camera
+  m_Name: Cam1 - S2E
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

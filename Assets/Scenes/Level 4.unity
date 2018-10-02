@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.02
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -19771,19 +19771,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.2941394
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.41472858
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.388873
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.76828384
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
       propertyPath: m_RootOrder
@@ -19796,6 +19796,18 @@ Prefab:
     - target: {fileID: 100000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
       propertyPath: m_Name
       value: rock_support (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 7.4360003
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -60.852
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -58.064003
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: dddab24de4d2a8249962f8fb0619baa0, type: 3}
