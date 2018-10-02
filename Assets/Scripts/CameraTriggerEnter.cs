@@ -25,8 +25,8 @@ public class CameraTriggerEnter : MonoBehaviour {
         if(timer >= 1.0f)
         {
             startTimer = false;
-            ani.Stop("Cam1-E2S");
-            ani.Stop("Level 1 Camera");
+            ani.Stop("Cam1 - E2S");
+            ani.Stop("Cam1 - S2E");
             timer = 0.0f;
         }
     }
@@ -37,12 +37,12 @@ public class CameraTriggerEnter : MonoBehaviour {
         {
             if(isFoward)
             {
-                ani.Play("Level 1 Camera");
+                ani.Play("Cam1 - S2E");
                 startTimer = true;
             }
             else
             {
-                ani.Play("Cam1-E2S");
+                ani.Play("Cam1 - E2S");
                 startTimer = true;
             }
         }
