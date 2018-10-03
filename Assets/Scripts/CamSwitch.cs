@@ -7,14 +7,11 @@ public class CamSwitch : MonoBehaviour {
     public GameObject vCamMain;
     public GameObject[] vCamOther;
 
-    private bool atStart = true;
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == ("Player") && atStart)
+        if (other.tag == ("Player"))
         {
-            vCamMain.SetActive(false);
-            atStart = false;
+            vCamMain.SetActive(true);
             Debug.Log("YES");
 
             for(int i = 0; i < vCamOther.Length; i++)

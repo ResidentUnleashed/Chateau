@@ -10,7 +10,7 @@ public class StickToPlat : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Lock")
+        if (other.tag == "Lock1")
         {
             transform.parent = plat1;
         }
@@ -25,7 +25,7 @@ public class StickToPlat : MonoBehaviour {
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Lock")
+        if (other.tag == "Lock1")
         {
             transform.parent = null;
         }

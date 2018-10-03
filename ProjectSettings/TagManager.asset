@@ -12,6 +12,9 @@ TagManager:
   - Death
   - ParticleDisplay
   - CamAni
+  - Lock1
+  - Lock2
+  - Lock3
   layers:
   - Default
   - TransparentFX
