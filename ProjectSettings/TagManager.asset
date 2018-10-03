@@ -11,6 +11,7 @@ TagManager:
   - Roof
   - Death
   - ParticleDisplay
+  - CamAni
   layers:
   - Default
   - TransparentFX
