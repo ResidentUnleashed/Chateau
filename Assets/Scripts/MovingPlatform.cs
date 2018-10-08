@@ -76,30 +76,6 @@ public class MovingPlatform : MonoBehaviour {
             else if (!hasSwitchedPos && numberOfTargets == 2)
             {
                 //Check if we need to start again
-                if(target = start)
-                {
-                    currentTarget = 0;
-                }
-
-
-                if(currentTarget == 0) /* Go to the middle */
-                {
-                    target = middle;
-
-                    currentTarget++;
-                    hasSwitchedPos = true;
-                }
-                else if(currentTarget == 1) /* Go back to the start */
-                {
-                    target = start;
-
-                    hasSwitchedPos = true;
-                }
-                
-            }
-            else if (!hasSwitchedPos && numberOfTargets == 3)
-            {
-                //Check if we need to start again
                 if (target = start)
                 {
                     currentTarget = 0;
@@ -127,7 +103,7 @@ public class MovingPlatform : MonoBehaviour {
                     hasSwitchedPos = true;
                 }
             }
-            else if (!hasSwitchedPos && numberOfTargets == 4)
+            else if (!hasSwitchedPos && numberOfTargets == 3)
             {
                 //Check if we need to start again
                 if (target = start)
