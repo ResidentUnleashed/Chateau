@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour {
 
+    /* CUTSCENE SCRIPT */
+
     [SerializeField]
     private GameObject[] cameraList;
     [SerializeField]
     private TowardsTarget[] scriptList;
     [SerializeField]
     private Animator greenPipAni;
-
 
 
     private float timer;
