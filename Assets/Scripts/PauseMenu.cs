@@ -33,7 +33,7 @@ public class PauseMenu : MonoBehaviour {
         if (gameIsPaused)
         {
             Pause();
-            
+
             if(!hasScrolled)
             {
                 //Change the current selected based on input with a clamp
