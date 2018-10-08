@@ -32,6 +32,7 @@ public class AniCycle : MonoBehaviour {
             switchImage = true;
         }
 
+        //Cycle through the list and switch animation frames (based on materials)
         if(switchImage)
         {
             for(int i = 0; i < materials.Length; i++)
