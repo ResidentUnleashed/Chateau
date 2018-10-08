@@ -36,7 +36,7 @@ public class PauseMenu : MonoBehaviour {
 
             if(!hasScrolled)
             {
-                //Change the current selected based on input with a clamp
+                //Change the current selected based on input with a clamp0
                 if (Input.GetAxis("Vertical") == -1)
                 {
                     currentSelected++;
