@@ -346,7 +346,7 @@ public class PlayerMovement : MonoBehaviour
                     Debug.DrawRay(shadow.transform.position, shadow.transform.up, Color.blue);
                     canRotate = true;
 
-                    //If hit wall or floor, change direction to the normal of the hit object
+                    //If hit wall or floor, change direction to the normal of the hit objectvggw
                     if (objectHit.transform.tag == "Wall")
                     {
                         direction = objectHit.normal.normalized;
