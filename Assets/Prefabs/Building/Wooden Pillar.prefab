@@ -69,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4337255987389698}
   m_Layer: 0
-  m_Name: wooden_pillar
+  m_Name: Wooden Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
