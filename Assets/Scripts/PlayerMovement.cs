@@ -48,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion oldRot;
     private Quaternion targetRot;
     private Rigidbody rb;
-    private PlayerRotation playerRotation;
     private RaycastDetection raycastDetection;
     private ChangeForm changeForm;
     private GameObject anch;
@@ -131,7 +130,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //Obtain components
         rb = GetComponent<Rigidbody>();
-        playerRotation = GetComponent<PlayerRotation>();
         raycastDetection = GetComponent<RaycastDetection>();
         animator = GetComponent<Animator>();
         changeForm = GetComponent<ChangeForm>();
@@ -463,7 +461,6 @@ public class PlayerMovement : MonoBehaviour
             fallOff = false;
             canMove = false;
             onWall = true;
-            playerRotation.enabled = false;
             rotTimer = 0.0f;
             oldRot = transform.rotation;
 
@@ -496,7 +493,6 @@ public class PlayerMovement : MonoBehaviour
         {
             onWall = false;
             canMove = false;
-            playerRotation.enabled = false;
             rotTimer = 0.0f;
             oldRot = transform.rotation;
             RotateDirection();
