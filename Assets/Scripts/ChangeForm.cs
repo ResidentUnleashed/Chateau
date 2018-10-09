@@ -18,7 +18,8 @@ public class ChangeForm : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         rayDet = GetComponent<RaycastDetection>();
         playerMovement = GetComponent<PlayerMovement>();
 	}
