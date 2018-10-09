@@ -24,7 +24,7 @@ public class Checkpoint : MonoBehaviour
 		if(updateCheckpoint)
         {
             playerMovement.RespawnPos = new Vector3(transform.position.x, (transform.position.y + yOffset), transform.position.z);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 	}
 
@@ -33,6 +33,14 @@ public class Checkpoint : MonoBehaviour
         if(other.tag == "Player")
         {
             updateCheckpoint = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            updateCheckpoint = false;
         }
     }
 }
