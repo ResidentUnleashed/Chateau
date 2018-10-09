@@ -343,10 +343,10 @@ public class PlayerMovement : MonoBehaviour
                 if (!onWall)
                 {
                     Debug.Log("Up Raycast on: " + objectHit.collider);
-                    Debug.DrawRay(transform.position, transform.forward, Color.blue);
+                    Debug.DrawRay(shadow.transform.position, shadow.transform.up, Color.blue);
                     canRotate = true;
 
-                    //If hit wall or floor, change direction to the normal of the hit object
+                    //If hit wall or floor, change direction to the normal of the hit objectvggw
                     if (objectHit.transform.tag == "Wall")
                     {
                         direction = objectHit.normal.normalized;
