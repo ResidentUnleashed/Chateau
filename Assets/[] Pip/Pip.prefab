@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 114150023581317678}
   - component: {fileID: 114962076900943890}
   - component: {fileID: 114661470477613518}
+  - component: {fileID: 114162925995227814}
   m_Layer: 8
   m_Name: Pip
   m_TagString: Player
@@ -304,7 +305,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4175709765389260}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4056808378048836
 Transform:
@@ -326,7 +327,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1384617050417430}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0.2292765, z: -0.04883559}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children: []
@@ -352,7 +353,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783377753209772}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -360,7 +361,7 @@ Transform:
   - {fileID: 4242299300297596}
   m_Father: {fileID: 4175709765389260}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4161636976905192
 Transform:
   m_ObjectHideFlags: 1
@@ -382,12 +383,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1286672531712736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4085205102074612}
-  - {fileID: 4046484038317568}
   - {fileID: 4351306145770674}
+  - {fileID: 4046484038317568}
   - {fileID: 4619815272049686}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -453,14 +454,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1161321604289066}
   m_LocalRotation: {x: -0, y: 0.86602545, z: -0, w: 0.49999994}
-  m_LocalPosition: {x: -6.4376826, y: -1.580833, z: -1.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4211744615740510}
   - {fileID: 4757475173205974}
   - {fileID: 4329098649116216}
   m_Father: {fileID: 4175709765389260}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!4 &4489047643946092
 Transform:
@@ -568,7 +569,7 @@ Animator:
   m_GameObject: {fileID: 1783377753209772}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 98d50707639929343a41475f4386b0ed, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 529a9898bab142342a103cc5156e27cf, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -595,10 +596,22 @@ MonoBehaviour:
   anchorDistance: -1
   anchorOffset: -1
   rotateTime: 0.3
-  m_model: {fileID: 1324507096781070}
-  shadow: {fileID: 1662393950042648}
-  pipAni: {fileID: 95517627942249772}
-  drag: 3
+  m_model: {fileID: 1783377753209772}
+  shadow: {fileID: 1161321604289066}
+  pipAni: {fileID: 95843190231979292}
+  drag: 5
+--- !u!114 &114162925995227814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286672531712736}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1aa307368099a94fb77ebfd701a606e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!114 &114661470477613518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,8 +623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305edc283f265494b943b30c7a2677d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigMode: {fileID: 1324507096781070}
-  littleMode: {fileID: 1662393950042648}
+  bigMode: {fileID: 1783377753209772}
+  littleMode: {fileID: 1161321604289066}
 --- !u!114 &114962076900943890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -692,7 +705,7 @@ CapsuleCollider:
   m_Radius: 0.36
   m_Height: 0.74
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: -0}
+  m_Center: {x: 0, y: 0.09, z: 0}
 --- !u!137 &137322775688662466
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
