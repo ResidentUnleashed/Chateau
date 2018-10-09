@@ -12,6 +12,15 @@ public class MainMenu : MonoBehaviour
     private GameObject levelSelectUI;
 
 
+
+    private void Update()
+    {
+        
+    }
+
+
+
+
     public void BackToMenu()
     {
         //Turn on the main menu

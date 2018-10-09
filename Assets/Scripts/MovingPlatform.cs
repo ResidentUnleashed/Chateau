@@ -37,7 +37,9 @@ public class MovingPlatform : MonoBehaviour {
     private Transform middle;
     private Transform middle2;
     private Transform end;
-    private int currentTarget = 0;
+    private int currentTarget = 1;
+    private bool startTimer = false;
+    private bool firstTime = true;
 
 
     private void Awake()
@@ -51,17 +53,22 @@ public class MovingPlatform : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        if(startTimer)
+        {
+            waitTimer += Time.deltaTime;
+        }
 
         if (waitTimer > maxWait)
         {
             //Waited long enough
+            startTimer = false;
             wait = false;
         }
 
 
         if (wait)
         {
-            waitTimer += Time.deltaTime;
+            startTimer = true;
 
             if(!hasSwitchedPos && numberOfTargets == 1)
             {
@@ -76,7 +83,7 @@ public class MovingPlatform : MonoBehaviour {
             else if (!hasSwitchedPos && numberOfTargets == 2)
             {
                 //Check if we need to start again
-                if (target = start)
+                if (target == start)
                 {
                     currentTarget = 0;
                 }
@@ -106,7 +113,7 @@ public class MovingPlatform : MonoBehaviour {
             else if (!hasSwitchedPos && numberOfTargets == 3)
             {
                 //Check if we need to start again
-                if (target = start)
+                if (target == start)
                 {
                     currentTarget = 0;
                 }

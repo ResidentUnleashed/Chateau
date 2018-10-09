@@ -26,7 +26,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 1
         inSlope: -0
         outSlope: 0
@@ -35,7 +35,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._MainTex_ST.x
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -48,7 +48,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 1
         inSlope: -0
         outSlope: 0
@@ -57,7 +57,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._MainTex_ST.y
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -70,7 +70,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 0
         inSlope: -0
         outSlope: 0
@@ -79,7 +79,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._MainTex_ST.z
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -89,19 +89,19 @@ AnimationClip:
         time: 0
         value: 0
         inSlope: 0
-        outSlope: 0.6505263
+        outSlope: 0.24545455
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
-        value: 2.06
-        inSlope: 0.6505263
+        time: 5.5
+        value: 1.35
+        inSlope: 0.24545455
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._MainTex_ST.w
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -114,7 +114,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 1
         inSlope: -0
         outSlope: 0
@@ -123,7 +123,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._EmissionMap_ST.x
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -136,7 +136,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 1
         inSlope: -0
         outSlope: 0
@@ -145,7 +145,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._EmissionMap_ST.y
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -158,7 +158,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 0
         inSlope: -0
         outSlope: 0
@@ -167,7 +167,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._EmissionMap_ST.z
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -177,19 +177,195 @@ AnimationClip:
         time: 0
         value: 0
         inSlope: 0
-        outSlope: 0.6505263
+        outSlope: 0.24545455
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
-        value: 2.06
-        inSlope: 0.6505263
+        time: 5.5
+        value: 1.35
+        inSlope: 0.24545455
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._EmissionMap_ST.w
-    path: 
+    path: waterfall/water_fall
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._MainTex_ST.x
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._MainTex_ST.y
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 0
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._MainTex_ST.z
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.18181819
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: 0.18181819
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._MainTex_ST.w
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissionMap_ST.x
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissionMap_ST.y
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 0
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissionMap_ST.z
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.18181819
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: 0.18181819
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissionMap_ST.w
+    path: waterfall_ripple
     classID: 23
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -201,56 +377,112 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 3585595241
       attribute: 914802057
       script: {fileID: 0}
       typeID: 23
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 3585595241
       attribute: 974912624
       script: {fileID: 0}
       typeID: 23
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 1792244003
+      attribute: 914802057
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1792244003
+      attribute: 974912624
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3585595241
       attribute: 109495689
       script: {fileID: 0}
       typeID: 23
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 3585595241
       attribute: 377931145
       script: {fileID: 0}
       typeID: 23
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 3585595241
       attribute: 646366601
       script: {fileID: 0}
       typeID: 23
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 3585595241
       attribute: 169606256
       script: {fileID: 0}
       typeID: 23
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 3585595241
       attribute: 438041712
       script: {fileID: 0}
       typeID: 23
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 3585595241
+      attribute: 706477168
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1792244003
+      attribute: 109495689
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1792244003
+      attribute: 377931145
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1792244003
+      attribute: 646366601
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1792244003
+      attribute: 169606256
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1792244003
+      attribute: 438041712
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1792244003
       attribute: 706477168
       script: {fileID: 0}
       typeID: 23
@@ -262,7 +494,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3.1666667
+    m_StopTime: 5.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -288,7 +520,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 1
         inSlope: -0
         outSlope: 0
@@ -297,7 +529,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._MainTex_ST.x
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -310,7 +542,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 1
         inSlope: -0
         outSlope: 0
@@ -319,7 +551,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._MainTex_ST.y
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -332,7 +564,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 0
         inSlope: -0
         outSlope: 0
@@ -341,7 +573,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._MainTex_ST.z
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -351,19 +583,19 @@ AnimationClip:
         time: 0
         value: 0
         inSlope: 0
-        outSlope: 0.6505263
+        outSlope: 0.24545455
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
-        value: 2.06
-        inSlope: 0.6505263
+        time: 5.5
+        value: 1.35
+        inSlope: 0.24545455
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._MainTex_ST.w
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -376,7 +608,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 1
         inSlope: -0
         outSlope: 0
@@ -385,7 +617,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._EmissionMap_ST.x
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -398,7 +630,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 1
         inSlope: -0
         outSlope: 0
@@ -407,7 +639,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._EmissionMap_ST.y
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -420,7 +652,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
+        time: 5.5
         value: 0
         inSlope: -0
         outSlope: 0
@@ -429,7 +661,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._EmissionMap_ST.z
-    path: 
+    path: waterfall/water_fall
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -439,19 +671,195 @@ AnimationClip:
         time: 0
         value: 0
         inSlope: 0
-        outSlope: 0.6505263
+        outSlope: 0.24545455
         tangentMode: 69
       - serializedVersion: 2
-        time: 3.1666667
-        value: 2.06
-        inSlope: 0.6505263
+        time: 5.5
+        value: 1.35
+        inSlope: 0.24545455
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._EmissionMap_ST.w
-    path: 
+    path: waterfall/water_fall
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._MainTex_ST.x
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._MainTex_ST.y
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 0
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._MainTex_ST.z
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.18181819
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: 0.18181819
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._MainTex_ST.w
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissionMap_ST.x
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissionMap_ST.y
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 0
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissionMap_ST.z
+    path: waterfall_ripple
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.18181819
+        tangentMode: 69
+      - serializedVersion: 2
+        time: 5.5
+        value: 1
+        inSlope: 0.18181819
+        outSlope: 0
+        tangentMode: 69
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissionMap_ST.w
+    path: waterfall_ripple
     classID: 23
     script: {fileID: 0}
   m_EulerEditorCurves: []

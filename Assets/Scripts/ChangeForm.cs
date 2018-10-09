@@ -10,6 +10,7 @@ public class ChangeForm : MonoBehaviour {
     private RaycastDetection rayDet;
     private bool isLittle = false;
     private PlayerMovement playerMovement;
+    private bool underObject = false;
 
     public bool IsLittle
     {
@@ -33,7 +34,7 @@ public class ChangeForm : MonoBehaviour {
                 littleMode.SetActive(true);
                 isLittle = true;
             }
-            else if (Input.GetButtonDown("Fire1") && isLittle && !playerMovement.OnWall)
+            else if (Input.GetButtonDown("Fire1") && isLittle && !playerMovement.OnWall && !underObject)
             {
                 bigMode.SetActive(true);
                 littleMode.SetActive(false);
@@ -48,4 +49,20 @@ public class ChangeForm : MonoBehaviour {
             isLittle = false;
         }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.transform.tag == "Under")
+        {
+            underObject = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Under")
+        {
+            underObject = false;
+        }
+    }
 }

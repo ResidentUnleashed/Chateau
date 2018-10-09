@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
   m_Fog: 1
-  m_FogColor: {r: 0.412846, g: 0.51225096, b: 0.6102941, a: 1}
+  m_FogColor: {r: 0.52205884, g: 0.5110988, b: 0.48751083, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.012
   m_LinearFogStart: 0
@@ -176,11 +176,7 @@ Transform:
   - {fileID: 1106772780}
   - {fileID: 298921054}
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 14
-=======
   m_RootOrder: 15
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &34936887
 Prefab:
@@ -219,11 +215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 6
-=======
       value: 7
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -425,7 +417,7 @@ GameObject:
   - component: {fileID: 91284765}
   - component: {fileID: 91284764}
   - component: {fileID: 91284763}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,11 +527,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 3
-=======
       value: 4
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -1854,14 +1842,13 @@ GameObject:
   - component: {fileID: 559233947}
   - component: {fileID: 559233950}
   - component: {fileID: 559233949}
-  - component: {fileID: 559233948}
   m_Layer: 0
   m_Name: Pip Struggling
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &559233947
 Transform:
   m_ObjectHideFlags: 0
@@ -1875,13 +1862,6 @@ Transform:
   m_Father: {fileID: 702505034}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -16, y: -160, z: 0}
---- !u!81 &559233948
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 559233946}
-  m_Enabled: 1
 --- !u!124 &559233949
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1967,11 +1947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 13
-=======
       value: 14
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -2533,7 +2509,7 @@ GameObject:
   - component: {fileID: 711150897}
   - component: {fileID: 711150896}
   - component: {fileID: 711150895}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2604,24 +2580,8 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 702505033}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 611163519}
-  - {fileID: 960922753}
-  - {fileID: 902478963}
-  - {fileID: 994012024}
-  - {fileID: 50548715}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
   m_GameObject: {fileID: 711150893}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
 --- !u!1 &737954808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,7 +2882,7 @@ GameObject:
   - component: {fileID: 803089235}
   - component: {fileID: 803089234}
   - component: {fileID: 803089233}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3169,7 +3129,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.66
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -3206,7 +3166,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &858420247
 Prefab:
@@ -3245,11 +3205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 9
-=======
       value: 10
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -4102,11 +4058,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 15
-=======
   m_RootOrder: 2
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1123022073
 MonoBehaviour:
@@ -4175,11 +4127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 10
-=======
       value: 11
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -4413,7 +4361,7 @@ GameObject:
   - component: {fileID: 1273657346}
   - component: {fileID: 1273657345}
   - component: {fileID: 1273657344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4555,7 +4503,7 @@ GameObject:
   - component: {fileID: 1350520694}
   - component: {fileID: 1350520693}
   - component: {fileID: 1350520692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5310,7 +5258,7 @@ GameObject:
   - component: {fileID: 1623555174}
   - component: {fileID: 1623555173}
   - component: {fileID: 1623555172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5420,11 +5368,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 5
-=======
       value: 6
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -5449,71 +5393,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e97c751145690e044b8df0167f9dc984, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &1660023925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1660023927}
-  - component: {fileID: 1660023926}
-  m_Layer: 0
-  m_Name: Directional light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1660023926
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1660023925}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 1
-  m_Color: {r: 1, g: 0.86237323, b: 0.5661765, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &1660023927
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1660023925}
-  m_LocalRotation: {x: -0.06820615, y: -0.6260437, z: 0.5449202, w: 0.5536056}
-  m_LocalPosition: {x: -0.36400938, y: 22.98022, z: -5.629875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 37.356003, y: -434.918, z: -299.948}
 --- !u!1001 &1676238480
 Prefab:
   m_ObjectHideFlags: 0
@@ -5576,7 +5455,7 @@ GameObject:
   - component: {fileID: 1681092043}
   - component: {fileID: 1681092042}
   - component: {fileID: 1681092041}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5802,7 +5681,7 @@ GameObject:
   - component: {fileID: 1734961304}
   - component: {fileID: 1734961303}
   - component: {fileID: 1734961302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5975,11 +5854,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: b0554ca520ddf024fba41af5de1acd4f, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 4
-=======
       value: 5
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: b0554ca520ddf024fba41af5de1acd4f, type: 3}
       propertyPath: m_LocalScale.x
@@ -6209,11 +6084,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4842360678330646, guid: 762f6fb24c6b6fa4bb253978135f0ba5, type: 2}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 2
-=======
       value: 3
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 4212453983458682, guid: 762f6fb24c6b6fa4bb253978135f0ba5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6798,11 +6669,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 12
-=======
       value: 13
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -6844,7 +6711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2042555104
 Transform:
   m_ObjectHideFlags: 0
@@ -7008,11 +6875,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 11
-=======
       value: 12
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -7200,7 +7063,7 @@ GameObject:
   - component: {fileID: 2097061925}
   - component: {fileID: 2097061924}
   - component: {fileID: 2097061923}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7419,11 +7282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 7
-=======
       value: 8
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name
@@ -7485,11 +7344,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 8
-=======
       value: 9
->>>>>>> 59ed04d8ad5ee918f3c826e40efcf7f7048fe5eb
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e97c751145690e044b8df0167f9dc984, type: 3}
       propertyPath: m_Name

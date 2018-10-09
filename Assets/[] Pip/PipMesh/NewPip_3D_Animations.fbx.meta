@@ -44,11 +44,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mesh_Test_lambert2SG2
     second: {fileID: 2100000, guid: f4d7fe13dadccaa4bb3e0d43887b3dc7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mesh_Test_lambert3SG2
-    second: {fileID: 2100000, guid: d747f98fd205f844795ef6119df8185c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
