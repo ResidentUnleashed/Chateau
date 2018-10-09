@@ -1,17 +1,38 @@
 fileFormatVersion: 2
-guid: 708779bed3c00c14587778a6ffa3d057
-timeCreated: 1535414711
+guid: 239f6c7d2cb22ea4bb9c81f7f415e9f7
+timeCreated: 1539063500
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: boxes
+    100002: bracket
+    100004: //RootNode
+    100006: frame
+    100008: push_plate
+    100010: wheels
+    400000: boxes
+    400002: bracket
+    400004: //RootNode
+    400006: frame
+    400008: push_plate
+    400010: wheels
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: crate
-    9500000: //RootNode
+    2300000: boxes
+    2300002: bracket
+    2300004: frame
+    2300006: push_plate
+    2300008: wheels
+    3300000: boxes
+    3300002: bracket
+    3300004: frame
+    3300006: push_plate
+    3300008: wheels
+    4300000: push_plate
+    4300002: boxes
+    4300004: wheels
+    4300006: frame
+    4300008: bracket
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -86,7 +107,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
