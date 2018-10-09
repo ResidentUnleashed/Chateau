@@ -11,12 +11,18 @@ ModelImporter:
     100006: frame
     100008: push_plate
     100010: wheels
+    100012: wheels1
+    100014: wheels2
+    100016: wheels3
     400000: boxes
     400002: bracket
     400004: //RootNode
     400006: frame
     400008: push_plate
     400010: wheels
+    400012: wheels1
+    400014: wheels2
+    400016: wheels3
     2100000: lambert1
     2100002: lambert114
     2300000: boxes
@@ -24,16 +30,25 @@ ModelImporter:
     2300004: frame
     2300006: push_plate
     2300008: wheels
+    2300010: wheels1
+    2300012: wheels2
+    2300014: wheels3
     3300000: boxes
     3300002: bracket
     3300004: frame
     3300006: push_plate
     3300008: wheels
+    3300010: wheels1
+    3300012: wheels2
+    3300014: wheels3
     4300000: push_plate
     4300002: boxes
     4300004: wheels
     4300006: frame
     4300008: bracket
+    4300010: wheels1
+    4300012: wheels2
+    4300014: wheels3
   externalObjects: {}
   materials:
     importMaterials: 1
