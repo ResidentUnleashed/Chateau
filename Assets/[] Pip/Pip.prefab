@@ -85,7 +85,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1165667895137364
 GameObject:
   m_ObjectHideFlags: 1
@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 114962076900943890}
   - component: {fileID: 114661470477613518}
   - component: {fileID: 114162925995227814}
+  - component: {fileID: 114132366523851794}
   m_Layer: 8
   m_Name: Pip
   m_TagString: Player
@@ -382,8 +383,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1286672531712736}
-  m_LocalRotation: {x: -0, y: -0.2588186, z: -0, w: 0.965926}
-  m_LocalPosition: {x: 2.57, y: 3, z: 16.52}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 3, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4085205102074612}
@@ -392,7 +393,7 @@ Transform:
   - {fileID: 4619815272049686}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -30.000002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4211744615740510
 Transform:
   m_ObjectHideFlags: 1
@@ -453,7 +454,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1161321604289066}
-  m_LocalRotation: {x: -0, y: 0.86602545, z: -0, w: 0.49999994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -462,7 +463,7 @@ Transform:
   - {fileID: 4329098649116216}
   m_Father: {fileID: 4175709765389260}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4489047643946092
 Transform:
   m_ObjectHideFlags: 1
@@ -577,6 +578,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114132366523851794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286672531712736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e969f88744a85c945b685260458b441b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plat1: {fileID: 0}
+  plat2: {fileID: 0}
+  plat3: {fileID: 0}
 --- !u!114 &114150023581317678
 MonoBehaviour:
   m_ObjectHideFlags: 1
