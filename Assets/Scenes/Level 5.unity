@@ -528,8 +528,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 6, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 6, z: 6}
+  m_Center: {x: 0, y: 0, z: 2}
 --- !u!33 &99963652
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1085,13 +1085,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 257100878}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.58, y: 0.58, z: -0.24}
+  m_LocalRotation: {x: -6.984918e-10, y: -0.0000000149011585, z: 0.022445504, w: 0.9997481}
+  m_LocalPosition: {x: 11.58, y: -0.42, z: -0.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 286631785}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.572}
 --- !u!65 &257100880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1258,7 +1258,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 5
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1468,8 +1468,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 3, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 5, z: 6}
+  m_Center: {x: 0, y: 0.5, z: 2}
 --- !u!33 &356882006
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5151,8 +5151,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1477439684}
   - component: {fileID: 1477439688}
-  - component: {fileID: 1477439687}
   - component: {fileID: 1477439686}
+  - component: {fileID: 1477439685}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -5167,12 +5167,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1477439683}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 147363699}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1477439685
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477439683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1477439686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5207,19 +5221,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1477439687
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1477439683}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1477439688
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6051,8 +6052,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 6, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 6, z: 6}
+  m_Center: {x: 0, y: 0, z: 2}
 --- !u!33 &1814276380
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6278,8 +6279,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 3, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 5, z: 6}
+  m_Center: {x: 0, y: 0.5, z: 2}
 --- !u!33 &1862623759
 MeshFilter:
   m_ObjectHideFlags: 0
