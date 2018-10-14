@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -9,7 +11,15 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject creditsUI;
     [SerializeField]
-    private GameObject levelSelectUI;
+    private GameObject levelSelectUI = null;
+    [SerializeField]
+    private string levelName;
+    [SerializeField]
+    private Text text1;
+    [SerializeField]
+    private Text text2;
+    [SerializeField]
+    private Text text3;
 
     //Play icon here
 
@@ -18,61 +28,86 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        if (!hasScrolled)
+        //If not in the menu 
+        if(mainMenuUI.activeSelf == false)
         {
-            //Change the current selected based on input with a clamp0
-            if (Input.GetAxis("Vertical") == -1)
+            if(Input.GetButtonDown("Fire2"))
             {
-                currentSelected++;
+                BackToMenu();
+            }
+        }
+        else
+        {
 
-                if (currentSelected >= 2)
+            if (!hasScrolled)
+            {
+                //Change the current selected based on input with a clamp0
+                if (Input.GetAxis("Vertical") == -1)
                 {
-                    currentSelected = 2;
+                    currentSelected++;
+
+                    if (currentSelected >= 2)
+                    {
+                        currentSelected = 2;
+                    }
+
+                    hasScrolled = true;
                 }
-
-                hasScrolled = true;
-            }
-            else if (Input.GetAxis("Vertical") == 1)
-            {
-                currentSelected--;
-
-                if (currentSelected <= 0)
+                else if (Input.GetAxis("Vertical") == 1)
                 {
-                    currentSelected = 0;
+                    currentSelected--;
+
+                    if (currentSelected <= 0)
+                    {
+                        currentSelected = 0;
+                    }
+
+                    hasScrolled = true;
                 }
-
-                hasScrolled = true;
             }
-        }
 
-        if (Input.GetAxis("Vertical") == 0)
-        {
-            //Allow for non infinite scrolling
-            hasScrolled = false;
-        }
-
-
-        //Change visuals of objects depending on if they are selected
-        if (currentSelected == 0)
-        {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetAxis("Vertical") == 0)
             {
-                //Load first level
+                //Allow for non infinite scrolling
+                hasScrolled = false;
             }
-        }
-        else if (currentSelected == 1)
-        {
 
-            if (Input.GetButtonDown("Fire1"))
+
+            //Change visuals of objects depending on if they are selected
+            if (currentSelected == 0)
             {
-                LevelSelect();
+                text3.color = Color.black;
+                text2.color = Color.black;
+                text1.color = Color.yellow;
+
+
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    //Load first level
+                    SceneManager.LoadScene(levelName);
+                }
             }
-        }
-        else if (currentSelected == 2)
-        {
-            if (Input.GetButtonDown("Fire1"))
+            else if (currentSelected == 1)
             {
-                Credits();
+                text1.color = Color.black;
+                text3.color = Color.black;
+                text2.color = Color.yellow;
+
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    Credits();
+                }
+            }
+            else if (currentSelected == 2)
+            {
+                text1.color = Color.black;
+                text2.color = Color.black;
+                text3.color = Color.yellow;
+
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    Application.Quit();
+                }
             }
         }
     }
@@ -84,7 +119,7 @@ public class MainMenu : MonoBehaviour
     {
         //Turn on the main menu
         creditsUI.SetActive(false);
-        levelSelectUI.SetActive(false);
+        //levelSelectUI.SetActive(false);
         mainMenuUI.SetActive(true);
     }
 
@@ -100,7 +135,7 @@ public class MainMenu : MonoBehaviour
     {
         //Turn on credits
         mainMenuUI.SetActive(false);
-        levelSelectUI.SetActive(false);
+        //levelSelectUI.SetActive(false);
         creditsUI.SetActive(true);
     }
 }
