@@ -129,7 +129,6 @@ GameObject:
   - component: {fileID: 114150023581317678}
   - component: {fileID: 114962076900943890}
   - component: {fileID: 114661470477613518}
-  - component: {fileID: 114162925995227814}
   - component: {fileID: 114132366523851794}
   m_Layer: 8
   m_Name: Pip
@@ -384,7 +383,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1286672531712736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4085205102074612}
@@ -615,18 +614,6 @@ MonoBehaviour:
   shadow: {fileID: 1161321604289066}
   pipAni: {fileID: 95843190231979292}
   drag: 5
---- !u!114 &114162925995227814
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1286672531712736}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1aa307368099a94fb77ebfd701a606e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 0.5
 --- !u!114 &114661470477613518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -638,6 +625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305edc283f265494b943b30c7a2677d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meldTimerCap: 1
+  unmeldTimerCap: 0.1
   bigMode: {fileID: 1783377753209772}
   littleMode: {fileID: 1161321604289066}
 --- !u!114 &114962076900943890
@@ -720,7 +709,7 @@ CapsuleCollider:
   m_Radius: 0.36
   m_Height: 0.74
   m_Direction: 1
-  m_Center: {x: 0, y: 0.14, z: 0}
+  m_Center: {x: 0, y: 0.19, z: 0}
 --- !u!137 &137322775688662466
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
