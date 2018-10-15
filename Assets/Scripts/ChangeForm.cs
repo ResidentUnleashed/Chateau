@@ -70,17 +70,20 @@ public class ChangeForm : MonoBehaviour {
         {
             if(!firstTime)
             {
-               meldTimer = 0.0f;
-               playerMovement.IsMelding = false;
-               
-               if (!hasJustUnmelded)
-               {
-                   playerMovement.IsUnmelded = true;
-               }
-               
-               bigMode.SetActive(true);
-               littleMode.SetActive(false);
-               isLittle = false;
+                if (!playerMovement.DownDetect)
+                {
+                    meldTimer = 0.0f;
+                    playerMovement.IsMelding = false;
+
+                    if (!hasJustUnmelded)
+                    {
+                        playerMovement.IsUnmelded = true;
+                    }
+
+                    bigMode.SetActive(true);
+                    littleMode.SetActive(false);
+                    isLittle = false;
+                }
             }
             
         }
