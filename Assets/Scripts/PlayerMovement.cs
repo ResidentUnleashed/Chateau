@@ -139,6 +139,10 @@ public class PlayerMovement : MonoBehaviour
         set { isUnmelded = value; }
     }
 
+    public bool DownDetect
+    {
+        get { return downDetect; }
+    }
     #endregion
 
     void Awake()

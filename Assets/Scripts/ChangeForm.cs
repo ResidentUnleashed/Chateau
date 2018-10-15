@@ -49,17 +49,20 @@ public class ChangeForm : MonoBehaviour {
             }
             else if (Input.GetButtonDown("Fire1") && isLittle && !playerMovement.OnWall)
             {
-                meldTimer = 0.0f;
-                playerMovement.IsMelding = false;
-
-                if(!hasJustUnmelded)
+                if(!playerMovement.DownDetect)
                 {
-                    playerMovement.IsUnmelded = true;
+                    meldTimer = 0.0f;
+                    playerMovement.IsMelding = false;
+
+                    if (!hasJustUnmelded)
+                    {
+                        playerMovement.IsUnmelded = true;
+                    }
+
+                    bigMode.SetActive(true);
+                    littleMode.SetActive(false);
+                    isLittle = false;
                 }
-                
-                bigMode.SetActive(true);
-                littleMode.SetActive(false);
-                isLittle = false;
             }
             
         }
@@ -67,17 +70,17 @@ public class ChangeForm : MonoBehaviour {
         {
             if(!firstTime)
             {
-                meldTimer = 0.0f;
-                playerMovement.IsMelding = false;
-                
-                if(!hasJustUnmelded)
-                {
-                    playerMovement.IsUnmelded = true;
-                }
-
-                bigMode.SetActive(true);
-                littleMode.SetActive(false);
-                isLittle = false;
+               meldTimer = 0.0f;
+               playerMovement.IsMelding = false;
+               
+               if (!hasJustUnmelded)
+               {
+                   playerMovement.IsUnmelded = true;
+               }
+               
+               bigMode.SetActive(true);
+               littleMode.SetActive(false);
+               isLittle = false;
             }
             
         }
