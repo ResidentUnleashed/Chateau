@@ -10,25 +10,40 @@ ModelImporter:
     100004: L_shape
     100006: //RootNode
     100008: x2_peice
+    100010: castle_bricks
+    100012: tower_bricks
+    100014: tower_lower_bricks
     400000: bricks
     400002: castle_flag_tower
     400004: L_shape
     400006: //RootNode
     400008: x2_peice
+    400010: castle_bricks
+    400012: tower_bricks
+    400014: tower_lower_bricks
     2100000: tower1
     2100002: lambert85
     2300000: bricks
     2300002: castle_flag_tower
     2300004: L_shape
     2300006: x2_peice
+    2300008: castle_bricks
+    2300010: tower_bricks
+    2300012: tower_lower_bricks
     3300000: bricks
     3300002: castle_flag_tower
     3300004: L_shape
     3300006: x2_peice
+    3300008: castle_bricks
+    3300010: tower_bricks
+    3300012: tower_lower_bricks
     4300000: castle_flag_tower
     4300002: x2_peice
     4300004: L_shape
     4300006: bricks
+    4300008: tower_bricks
+    4300010: tower_lower_bricks
+    4300012: castle_bricks
   externalObjects: {}
   materials:
     importMaterials: 1
