@@ -35,6 +35,68 @@ ModelImporter:
     100054: transform5
     100056: transform6
     100058: tutorial_2
+    100060: polySurface1
+    100062: polySurface10
+    100064: polySurface11
+    100066: polySurface12
+    100068: polySurface13
+    100070: polySurface14
+    100072: polySurface15
+    100074: polySurface16
+    100076: polySurface17
+    100078: polySurface18
+    100080: polySurface19
+    100082: polySurface2
+    100084: polySurface20
+    100086: polySurface21
+    100088: polySurface22
+    100090: polySurface23
+    100092: polySurface24
+    100094: polySurface25
+    100096: polySurface3
+    100098: polySurface35
+    100100: polySurface37
+    100102: polySurface38
+    100104: polySurface39
+    100106: polySurface4
+    100108: polySurface40
+    100110: polySurface41
+    100112: polySurface42
+    100114: polySurface43
+    100116: polySurface44
+    100118: polySurface45
+    100120: polySurface49
+    100122: polySurface5
+    100124: polySurface50
+    100126: polySurface51
+    100128: polySurface52
+    100130: polySurface53
+    100132: polySurface54
+    100134: polySurface55
+    100136: polySurface6
+    100138: polySurface7
+    100140: polySurface8
+    100142: polySurface9
+    100144: top_bricks
+    100146: transform20
+    100148: transform21
+    100150: transform22
+    100152: transform23
+    100154: transform24
+    100156: transform25
+    100158: transform26
+    100160: transform27
+    100162: transform28
+    100164: transform32
+    100166: transform33
+    100168: transform34
+    100170: transform35
+    100172: transform36
+    100174: transform37
+    100176: transform38
+    100178: transform39
+    100180: transform7
+    100182: transform8
     400000: bricks
     400002: castle_flag_tower
     400004: L_shape
@@ -65,10 +127,73 @@ ModelImporter:
     400054: transform5
     400056: transform6
     400058: tutorial_2
+    400060: polySurface1
+    400062: polySurface10
+    400064: polySurface11
+    400066: polySurface12
+    400068: polySurface13
+    400070: polySurface14
+    400072: polySurface15
+    400074: polySurface16
+    400076: polySurface17
+    400078: polySurface18
+    400080: polySurface19
+    400082: polySurface2
+    400084: polySurface20
+    400086: polySurface21
+    400088: polySurface22
+    400090: polySurface23
+    400092: polySurface24
+    400094: polySurface25
+    400096: polySurface3
+    400098: polySurface35
+    400100: polySurface37
+    400102: polySurface38
+    400104: polySurface39
+    400106: polySurface4
+    400108: polySurface40
+    400110: polySurface41
+    400112: polySurface42
+    400114: polySurface43
+    400116: polySurface44
+    400118: polySurface45
+    400120: polySurface49
+    400122: polySurface5
+    400124: polySurface50
+    400126: polySurface51
+    400128: polySurface52
+    400130: polySurface53
+    400132: polySurface54
+    400134: polySurface55
+    400136: polySurface6
+    400138: polySurface7
+    400140: polySurface8
+    400142: polySurface9
+    400144: top_bricks
+    400146: transform20
+    400148: transform21
+    400150: transform22
+    400152: transform23
+    400154: transform24
+    400156: transform25
+    400158: transform26
+    400160: transform27
+    400162: transform28
+    400164: transform32
+    400166: transform33
+    400168: transform34
+    400170: transform35
+    400172: transform36
+    400174: transform37
+    400176: transform38
+    400178: transform39
+    400180: transform7
+    400182: transform8
     2100000: tower1
     2100002: lambert85
     2100004: lambert86
     2100006: lambert88
+    2100008: lambert90
     2300000: bricks
     2300002: castle_flag_tower
     2300004: L_shape
@@ -85,6 +210,32 @@ ModelImporter:
     2300026: brick8
     2300028: brick9
     2300030: standard_piece2
+    2300032: polySurface1
+    2300034: polySurface10
+    2300036: polySurface11
+    2300038: polySurface12
+    2300040: polySurface13
+    2300042: polySurface14
+    2300044: polySurface15
+    2300046: polySurface16
+    2300048: polySurface17
+    2300050: polySurface18
+    2300052: polySurface19
+    2300054: polySurface2
+    2300056: polySurface20
+    2300058: polySurface21
+    2300060: polySurface22
+    2300062: polySurface23
+    2300064: polySurface24
+    2300066: polySurface25
+    2300068: polySurface3
+    2300070: polySurface4
+    2300072: polySurface5
+    2300074: polySurface6
+    2300076: polySurface7
+    2300078: polySurface8
+    2300080: polySurface9
+    2300082: top_bricks
     3300000: bricks
     3300002: castle_flag_tower
     3300004: L_shape
@@ -101,6 +252,32 @@ ModelImporter:
     3300026: brick8
     3300028: brick9
     3300030: standard_piece2
+    3300032: polySurface1
+    3300034: polySurface10
+    3300036: polySurface11
+    3300038: polySurface12
+    3300040: polySurface13
+    3300042: polySurface14
+    3300044: polySurface15
+    3300046: polySurface16
+    3300048: polySurface17
+    3300050: polySurface18
+    3300052: polySurface19
+    3300054: polySurface2
+    3300056: polySurface20
+    3300058: polySurface21
+    3300060: polySurface22
+    3300062: polySurface23
+    3300064: polySurface24
+    3300066: polySurface25
+    3300068: polySurface3
+    3300070: polySurface4
+    3300072: polySurface5
+    3300074: polySurface6
+    3300076: polySurface7
+    3300078: polySurface8
+    3300080: polySurface9
+    3300082: top_bricks
     4300000: castle_flag_tower
     4300002: x2_peice
     4300004: L_shape
@@ -117,6 +294,32 @@ ModelImporter:
     4300026: brick9
     4300028: brick10
     4300030: brick11
+    4300032: polySurface1
+    4300034: polySurface2
+    4300036: polySurface3
+    4300038: polySurface4
+    4300040: polySurface5
+    4300042: polySurface6
+    4300044: polySurface7
+    4300046: polySurface8
+    4300048: polySurface9
+    4300050: polySurface10
+    4300052: polySurface11
+    4300054: polySurface12
+    4300056: polySurface13
+    4300058: polySurface14
+    4300060: polySurface15
+    4300062: polySurface16
+    4300064: polySurface17
+    4300066: polySurface18
+    4300068: polySurface19
+    4300070: polySurface20
+    4300072: polySurface21
+    4300074: polySurface22
+    4300076: polySurface23
+    4300078: polySurface24
+    4300080: polySurface25
+    4300082: top_bricks
   externalObjects: {}
   materials:
     importMaterials: 1
