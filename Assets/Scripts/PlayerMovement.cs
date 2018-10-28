@@ -75,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isDead = false;
     private bool respawning = false;
     private bool onRoof = false;
+    private bool isMelding = false;
+    private bool isUnmelded = false;
     #endregion
 
     #region Get Set
@@ -124,6 +126,23 @@ public class PlayerMovement : MonoBehaviour
         get { return respawnPos; }
         set { respawnPos = value; }
     }
+
+    public bool IsMelding
+    {
+        get { return isMelding; }
+        set { isMelding = value; }
+    }
+
+    public bool IsUnmelded
+    {
+        get { return isUnmelded; }
+        set { isUnmelded = value; }
+    }
+
+    public bool DownDetect
+    {
+        get { return downDetect; }
+    }
     #endregion
 
     void Awake()
@@ -140,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
     {
         #region Small if checks
 
-        if(onWall || onGround)
+        if (onWall || onGround)
         {
             rb.drag = drag;
         }
@@ -218,8 +237,6 @@ public class PlayerMovement : MonoBehaviour
             Vector3 verticalMove = Vector3.zero;
             Vector3 moveDir = Vector3.zero;
 
-
-
             if (onWall && !onRoof)
             {
                 //Wall relative movement
@@ -242,15 +259,24 @@ public class PlayerMovement : MonoBehaviour
                 vel *= Time.deltaTime * 100;
             }
 
-            if(pipAni.gameObject.activeSelf == true)
+            if (pipAni.gameObject.activeSelf == true)
             {
-                pipAni.SetBool("isMelding", false);
-                
-                if(!onWall && !onRoof && Input.GetButtonDown("Fire1"))
+                if (!isUnmelded)
                 {
-                    pipAni.SetBool("isMelding", true);
-                }
+                    pipAni.SetBool("isUnmelding", false);
 
+                    if (!onWall && !onRoof && Input.GetButtonDown("Fire1") && raycastDetection.InShadow == true)
+                    {
+                        isMelding = true;
+                        pipAni.Play("Meld");
+                    }
+                }
+                else
+                {
+                    pipAni.SetBool("isUnmelding", true);
+                    pipAni.Play("Unmeld");
+                }
+            
                 //Animations
                 if (vel != Vector3.zero)
                 {
@@ -261,28 +287,29 @@ public class PlayerMovement : MonoBehaviour
                     pipAni.SetBool("isIdle", true);
                 }
             }
-            
 
-            //Model rotation
-            m_model.gameObject.transform.LookAt(transform.position + vel);
 
-            shadow.transform.localRotation = Quaternion.Euler(new Vector3(0, Vector3.SignedAngle(transform.forward, m_model.gameObject.transform.forward, transform.up), 0));
 
-            //Update move direction
-            moveDir = vel;
+                //Model rotation
+                m_model.gameObject.transform.LookAt(transform.position + vel);
 
-            //Smooth the movement
-            Vector3 targetMoveAmount = moveDir * walkSpeed;
-            moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
-        }
-        else
-        {
-            //Reset values and start timer
-            inputX = 0.0f;
-            inputY = 0.0f;
-            moveAmount = Vector3.zero;
-            controlStaticTimer += Time.deltaTime;
-        }
+                shadow.transform.localRotation = Quaternion.Euler(new Vector3(0, Vector3.SignedAngle(transform.forward, m_model.gameObject.transform.forward, transform.up), 0));
+
+                //Update move direction
+                moveDir = vel;
+
+                //Smooth the movement
+                Vector3 targetMoveAmount = moveDir * walkSpeed;
+                moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
+            }
+            else
+            {
+                //Reset values and start timer
+                inputX = 0.0f;
+                inputY = 0.0f;
+                moveAmount = Vector3.zero;
+                controlStaticTimer += Time.deltaTime;
+            }
     }
 
     private void LateUpdate()

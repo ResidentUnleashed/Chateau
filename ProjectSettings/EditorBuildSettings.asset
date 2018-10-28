@@ -6,11 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 6883dc02cfb861c4298e9d6ac0680006
+  - enabled: 1
+    path: Assets/Scenes/[Tutorial] 1 - Walking.unity
+    guid: fde35a5a13ff52a44bca06da84b015cd
+  - enabled: 1
+    path: Assets/Scenes/[Tutorial] 2 - Shadow Melding.unity
+    guid: f3697c0bfede64640b336f0800897eab
+  - enabled: 1
+    path: Assets/Scenes/[Tutorial] 3 - Ceiling Walk.unity
+    guid: a3b12e9cd724ae54084baef5d2b84509
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: d85bdbb83256ce544878a580bb238831
+  - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: fc4a51278d4746149842cd4068fc4050
   - enabled: 1
-    path: Assets/Scenes/Level 4.unity
-    guid: 12077f663f0fb144caec53b2eb13323f
-  - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: b88e2ba2fe62560469fb54bf5e14cf77
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 12077f663f0fb144caec53b2eb13323f

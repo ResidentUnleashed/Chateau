@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class ChangeForm : MonoBehaviour {
 
-    public GameObject bigMode;
-    public GameObject littleMode;
+    [SerializeField]
+    private float meldTimerCap = 1.0f;
+    [SerializeField]
+    private float unmeldTimerCap = 1.0f;
+    [SerializeField]
+    private GameObject bigMode;
+    [SerializeField]
+    private GameObject littleMode;
 
     private RaycastDetection rayDet;
     private bool isLittle = false;
     private PlayerMovement playerMovement;
-    private bool underObject = false;
+    private float meldTimer = 0.0f;
+    private float unmeldTimer = 0.0f;
+    private bool firstTime = true;
+    private bool hasJustUnmelded = false;
+
 
     public bool IsLittle
     {
@@ -31,39 +41,76 @@ public class ChangeForm : MonoBehaviour {
         {
             if(Input.GetButtonDown("Fire1") && !isLittle && !playerMovement.OnWall)
             {
-                bigMode.SetActive(false);
-                littleMode.SetActive(true);
-                isLittle = true;
+                firstTime = false;
+                hasJustUnmelded = false;
+                unmeldTimer = 0.0f;
+                playerMovement.IsUnmelded = false;
+                playerMovement.IsMelding = true;
             }
-            else if (Input.GetButtonDown("Fire1") && isLittle && !playerMovement.OnWall && !underObject)
+            else if (Input.GetButtonDown("Fire1") && isLittle && !playerMovement.OnWall)
             {
-                bigMode.SetActive(true);
-                littleMode.SetActive(false);
-                isLittle = false;
+                if(!playerMovement.DownDetect)
+                {
+                    meldTimer = 0.0f;
+                    playerMovement.IsMelding = false;
+
+                    if (!hasJustUnmelded)
+                    {
+                        playerMovement.IsUnmelded = true;
+                    }
+
+                    bigMode.SetActive(true);
+                    littleMode.SetActive(false);
+                    isLittle = false;
+                }
             }
             
         }
         else
         {
-            bigMode.SetActive(true);
-            littleMode.SetActive(false);
-            isLittle = false;
-        }
-	}
+            if(!firstTime)
+            {
+                if (!playerMovement.DownDetect)
+                {
+                    meldTimer = 0.0f;
+                    playerMovement.IsMelding = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.transform.tag == "Under")
-        {
-            underObject = true;
-        }
-    }
+                    if (!hasJustUnmelded)
+                    {
+                        playerMovement.IsUnmelded = true;
+                    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform.tag == "Under")
+                    bigMode.SetActive(true);
+                    littleMode.SetActive(false);
+                    isLittle = false;
+                }
+            }
+            
+        }
+
+        //Timers
+        if(playerMovement.IsMelding)
         {
-            underObject = false;
+            meldTimer += Time.deltaTime;
+        }
+        else if(playerMovement.IsUnmelded)
+        {
+            unmeldTimer += Time.deltaTime;
+        }
+
+        //Little
+        if (meldTimer > meldTimerCap)
+        {
+            bigMode.SetActive(false);
+            littleMode.SetActive(true);
+            isLittle = true;
+        }
+
+        //Big
+        if(unmeldTimer > unmeldTimerCap)
+        {
+            hasJustUnmelded = true;
+            playerMovement.IsUnmelded = false;
         }
     }
 }
