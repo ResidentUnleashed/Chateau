@@ -13,6 +13,28 @@ ModelImporter:
     100010: castle_bricks
     100012: tower_bricks
     100014: tower_lower_bricks
+    100016: brick
+    100018: brick1
+    100020: brick10
+    100022: brick11
+    100024: brick2
+    100026: brick3
+    100028: brick4
+    100030: brick5
+    100032: brick6
+    100034: brick7
+    100036: brick8
+    100038: brick9
+    100040: standard_piece
+    100042: standard_piece1
+    100044: standard_piece2
+    100046: transform1
+    100048: transform2
+    100050: transform3
+    100052: transform4
+    100054: transform5
+    100056: transform6
+    100058: tutorial_2
     400000: bricks
     400002: castle_flag_tower
     400004: L_shape
@@ -21,8 +43,32 @@ ModelImporter:
     400010: castle_bricks
     400012: tower_bricks
     400014: tower_lower_bricks
+    400016: brick
+    400018: brick1
+    400020: brick10
+    400022: brick11
+    400024: brick2
+    400026: brick3
+    400028: brick4
+    400030: brick5
+    400032: brick6
+    400034: brick7
+    400036: brick8
+    400038: brick9
+    400040: standard_piece
+    400042: standard_piece1
+    400044: standard_piece2
+    400046: transform1
+    400048: transform2
+    400050: transform3
+    400052: transform4
+    400054: transform5
+    400056: transform6
+    400058: tutorial_2
     2100000: tower1
     2100002: lambert85
+    2100004: lambert86
+    2100006: lambert88
     2300000: bricks
     2300002: castle_flag_tower
     2300004: L_shape
@@ -30,6 +76,15 @@ ModelImporter:
     2300008: castle_bricks
     2300010: tower_bricks
     2300012: tower_lower_bricks
+    2300014: brick
+    2300016: brick1
+    2300018: brick10
+    2300020: brick11
+    2300022: brick6
+    2300024: brick7
+    2300026: brick8
+    2300028: brick9
+    2300030: standard_piece2
     3300000: bricks
     3300002: castle_flag_tower
     3300004: L_shape
@@ -37,6 +92,15 @@ ModelImporter:
     3300008: castle_bricks
     3300010: tower_bricks
     3300012: tower_lower_bricks
+    3300014: brick
+    3300016: brick1
+    3300018: brick10
+    3300020: brick11
+    3300022: brick6
+    3300024: brick7
+    3300026: brick8
+    3300028: brick9
+    3300030: standard_piece2
     4300000: castle_flag_tower
     4300002: x2_peice
     4300004: L_shape
@@ -44,6 +108,15 @@ ModelImporter:
     4300008: tower_bricks
     4300010: tower_lower_bricks
     4300012: castle_bricks
+    4300014: standard_piece2
+    4300016: brick
+    4300018: brick1
+    4300020: brick6
+    4300022: brick7
+    4300024: brick8
+    4300026: brick9
+    4300028: brick10
+    4300030: brick11
   externalObjects: {}
   materials:
     importMaterials: 1
