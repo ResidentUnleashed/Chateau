@@ -97,6 +97,30 @@ ModelImporter:
     100178: transform39
     100180: transform7
     100182: transform8
+    100184: bot
+    100186: bricks1
+    100188: bricks10
+    100190: bricks11
+    100192: bricks12
+    100194: bricks13
+    100196: bricks14
+    100198: bricks15
+    100200: bricks16
+    100202: bricks17
+    100204: bricks18
+    100206: bricks19
+    100208: bricks2
+    100210: bricks20
+    100212: bricks21
+    100214: bricks3
+    100216: bricks4
+    100218: bricks5
+    100220: bricks6
+    100222: bricks7
+    100224: bricks8
+    100226: bricks9
+    100228: long_L_peice
+    100230: short_L_peice
     400000: bricks
     400002: castle_flag_tower
     400004: L_shape
@@ -189,6 +213,30 @@ ModelImporter:
     400178: transform39
     400180: transform7
     400182: transform8
+    400184: bot
+    400186: bricks1
+    400188: bricks10
+    400190: bricks11
+    400192: bricks12
+    400194: bricks13
+    400196: bricks14
+    400198: bricks15
+    400200: bricks16
+    400202: bricks17
+    400204: bricks18
+    400206: bricks19
+    400208: bricks2
+    400210: bricks20
+    400212: bricks21
+    400214: bricks3
+    400216: bricks4
+    400218: bricks5
+    400220: bricks6
+    400222: bricks7
+    400224: bricks8
+    400226: bricks9
+    400228: long_L_peice
+    400230: short_L_peice
     2100000: tower1
     2100002: lambert85
     2100004: lambert86
@@ -236,6 +284,30 @@ ModelImporter:
     2300078: polySurface8
     2300080: polySurface9
     2300082: top_bricks
+    2300084: bot
+    2300086: bricks1
+    2300088: bricks10
+    2300090: bricks11
+    2300092: bricks12
+    2300094: bricks13
+    2300096: bricks14
+    2300098: bricks15
+    2300100: bricks16
+    2300102: bricks17
+    2300104: bricks18
+    2300106: bricks19
+    2300108: bricks2
+    2300110: bricks20
+    2300112: bricks21
+    2300114: bricks3
+    2300116: bricks4
+    2300118: bricks5
+    2300120: bricks6
+    2300122: bricks7
+    2300124: bricks8
+    2300126: bricks9
+    2300128: long_L_peice
+    2300130: short_L_peice
     3300000: bricks
     3300002: castle_flag_tower
     3300004: L_shape
@@ -278,6 +350,30 @@ ModelImporter:
     3300078: polySurface8
     3300080: polySurface9
     3300082: top_bricks
+    3300084: bot
+    3300086: bricks1
+    3300088: bricks10
+    3300090: bricks11
+    3300092: bricks12
+    3300094: bricks13
+    3300096: bricks14
+    3300098: bricks15
+    3300100: bricks16
+    3300102: bricks17
+    3300104: bricks18
+    3300106: bricks19
+    3300108: bricks2
+    3300110: bricks20
+    3300112: bricks21
+    3300114: bricks3
+    3300116: bricks4
+    3300118: bricks5
+    3300120: bricks6
+    3300122: bricks7
+    3300124: bricks8
+    3300126: bricks9
+    3300128: long_L_peice
+    3300130: short_L_peice
     4300000: castle_flag_tower
     4300002: x2_peice
     4300004: L_shape
@@ -320,6 +416,30 @@ ModelImporter:
     4300078: polySurface24
     4300080: polySurface25
     4300082: top_bricks
+    4300084: long_L_peice
+    4300086: short_L_peice
+    4300088: bricks1
+    4300090: bricks2
+    4300092: bricks3
+    4300094: bricks4
+    4300096: bricks5
+    4300098: bricks6
+    4300100: bricks7
+    4300102: bricks8
+    4300104: bricks9
+    4300106: bricks10
+    4300108: bricks11
+    4300110: bricks12
+    4300112: bricks13
+    4300114: bricks14
+    4300116: bricks15
+    4300118: bricks16
+    4300120: bricks17
+    4300122: bricks18
+    4300124: bricks19
+    4300126: bricks20
+    4300128: bricks21
+    4300130: bot
   externalObjects: {}
   materials:
     importMaterials: 1
