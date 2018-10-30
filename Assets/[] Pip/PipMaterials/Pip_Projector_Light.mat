@@ -91,7 +91,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: 18cdf79ff6ec47c4b91c41da4e85ac69, type: 3}
+        m_Texture: {fileID: 2800000, guid: c5149d7598cb74a419a422c69d47ff71, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShoreTex:
@@ -135,7 +135,7 @@ Material:
     - _BaseColor: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
     - _BumpDirection: {r: 1, g: 1, b: -1, a: 1}
     - _BumpTiling: {r: 1, g: 1, b: -2, a: 3}
-    - _Color: {r: 1, g: 0.47586206, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.67626774, b: 0.38235295, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _Foam: {r: 0.1, g: 0.375, b: 0, a: 0}
