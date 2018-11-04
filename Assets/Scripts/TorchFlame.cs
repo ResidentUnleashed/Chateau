@@ -5,14 +5,14 @@ using UnityEngine;
 public class TorchFlame : MonoBehaviour {
 
     [SerializeField]
-    Animator flameAni;
+    ParticleSystem flame;
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            flameAni.Play("Torch");
+            flame.Play();
         }
     }
 }
