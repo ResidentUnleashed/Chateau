@@ -5,14 +5,20 @@ using UnityEngine;
 public class TorchFlame : MonoBehaviour {
 
     [SerializeField]
-    ParticleSystem flame;
+    GameObject flameIdle;
+    [SerializeField]
+    GameObject flameActive;
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            flame.Play();
+            if(flameIdle != null && flameActive != null)
+            {
+                flameIdle.SetActive(false);
+                flameActive.SetActive(true);
+            }
         }
     }
 }
