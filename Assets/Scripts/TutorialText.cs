@@ -45,17 +45,48 @@ public class TutorialText : MonoBehaviour
 
             if (distanceSqr < range)
             {
-                bigTextPip.gameObject.SetActive(true);
-                bigTextPipling.gameObject.SetActive(true);
-                smallTextPip.gameObject.SetActive(false);
-                smallTextPipling.gameObject.SetActive(false);
+                if(bigTextPip != null)
+                {
+                    bigTextPip.gameObject.SetActive(true);
+                }
+                
+                if(bigTextPipling != null)
+                {
+                    bigTextPipling.gameObject.SetActive(true);
+                }
+                
+                if(smallTextPip != null)
+                {
+                    smallTextPip.gameObject.SetActive(false);
+                }
+                
+                if(smallTextPipling != null)
+                {
+                    smallTextPipling.gameObject.SetActive(false);
+                }
+                
             }
             else
             {
-                smallTextPip.gameObject.SetActive(true);
-                smallTextPipling.gameObject.SetActive(true);
-                bigTextPip.SetActive(false);
-                bigTextPipling.SetActive(false);
+                if (smallTextPip != null)
+                {
+                    smallTextPip.gameObject.SetActive(true);
+                }
+
+                if (smallTextPipling != null)
+                {
+                    smallTextPipling.gameObject.SetActive(true);
+                }
+
+                if (bigTextPip != null)
+                {
+                    bigTextPip.gameObject.SetActive(false);
+                }
+
+                if (bigTextPipling != null)
+                {
+                    bigTextPipling.gameObject.SetActive(false);
+                }
             }
 
         }
