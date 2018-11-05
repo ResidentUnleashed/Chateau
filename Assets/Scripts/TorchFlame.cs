@@ -40,4 +40,16 @@ public class TorchFlame : MonoBehaviour {
             }
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if (flameIdle != null && flameActive != null)
+            {
+                flameIdle.SetActive(false);
+                flameActive.SetActive(true);
+            }
+        }
+    }
 }
