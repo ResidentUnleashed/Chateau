@@ -115,7 +115,6 @@ GameObject:
   - component: {fileID: 114962076900943890}
   - component: {fileID: 114661470477613518}
   - component: {fileID: 114132366523851794}
-  - component: {fileID: 114254079025959014}
   m_Layer: 8
   m_Name: Pip
   m_TagString: Player
@@ -430,7 +429,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1286672531712736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: -2311.995, z: 19.41}
+  m_LocalPosition: {x: -18, y: 0.543, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4085205102074612}
@@ -676,24 +675,6 @@ MonoBehaviour:
   shadow: {fileID: 1161321604289066}
   pipAni: {fileID: 95843190231979292}
   drag: 5
---- !u!114 &114254079025959014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1286672531712736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c710d5dba3b924aa88647657618674, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smallTextPip: {fileID: 0}
-  smallTextPipling: {fileID: 0}
-  bigTextPip: {fileID: 0}
-  bigTextPipling: {fileID: 0}
-  transformPip: {fileID: 0}
-  transformPipling: {fileID: 0}
-  range: 2
 --- !u!114 &114661470477613518
 MonoBehaviour:
   m_ObjectHideFlags: 1
