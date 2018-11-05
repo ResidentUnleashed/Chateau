@@ -240,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
             if (onWall && !onRoof)
             {
                 //Wall relative movement
-                Vector3 velY = Vector3.up * inputY;// * Time.deltaTime * 100;
+                Vector3 velY = Vector3.up * inputY;
                 Vector3 velX = new Vector3(-transform.up.z, 0, transform.up.x) * inputX;
                 vel = Vector3.Normalize(velX + velY);
                 vel *= Time.deltaTime * 100;
@@ -248,9 +248,9 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                // This is character relative movement
-                // vel = transform.forward * inputY + transform.right * inputX;
-                // vel *= Time.deltaTime * 100;
+                //This is character relative movement
+                //vel = transform.forward * inputY + transform.right * inputX;
+                //vel *= Time.deltaTime * 100;
 
                 //Camera relative movement
                 vel = Camera.main.transform.rotation * (new Vector3(inputX, 0.0f, inputY));

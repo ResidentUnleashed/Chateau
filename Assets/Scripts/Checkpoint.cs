@@ -11,8 +11,13 @@ public class Checkpoint : MonoBehaviour
     private bool updateCheckpoint = false;
     private PlayerMovement playerMovement;
 
-	// Use this for initialization
-	void Awake ()
+    public float YOffset
+    {
+        get { return yOffset; }
+    }
+
+    // Use this for initialization
+    void Awake ()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerMovement = player.GetComponent<PlayerMovement>();

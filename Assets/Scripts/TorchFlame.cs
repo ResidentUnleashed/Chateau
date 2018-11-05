@@ -8,7 +8,26 @@ public class TorchFlame : MonoBehaviour {
     GameObject flameIdle;
     [SerializeField]
     GameObject flameActive;
+    [SerializeField]
+    Transform checkpointTransform;
+    [SerializeField]
+    Checkpoint checkpoint;
 
+    private PlayerMovement playerMovement;
+
+    private void Awake()
+    {
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    }
+
+    private void Update()
+    {
+        if(playerMovement.RespawnPos != (new Vector3(checkpointTransform.position.x, (checkpointTransform.position.y + checkpoint.YOffset), checkpointTransform.position.z)))
+        {
+            flameIdle.SetActive(true);
+            flameActive.SetActive(false);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
