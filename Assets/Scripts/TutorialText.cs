@@ -18,7 +18,10 @@ public class TutorialText : MonoBehaviour
     private GameObject bigTextPipling;
 
     [SerializeField]
-    private Transform[] transforms;
+    private Transform transformPip;
+
+    [SerializeField]
+    private Transform transformPipling;
 
     [SerializeField]
     private float range;
@@ -33,62 +36,76 @@ public class TutorialText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetInactiveInRadius();
+        TextPip();
+        TextPipling();
     }
 
 
-    void GetInactiveInRadius()
+    private void TextPip()
     {
-        foreach (Transform tr in transform)
+        //Distance between two objects
+        Vector3 vecBetween = transform.position - transformPip.position;
+
+        float distance = vecBetween.magnitude;
+
+        if (distance < range)
         {
-            float distanceSqr = (transform.position - tr.position).sqrMagnitude;
-
-            if (distanceSqr < range)
+            if (smallTextPip != null)
             {
-                if(bigTextPip != null)
-                {
-                    bigTextPip.gameObject.SetActive(true);
-                }
-                
-                if(bigTextPipling != null)
-                {
-                    bigTextPipling.gameObject.SetActive(true);
-                }
-                
-                if(smallTextPip != null)
-                {
-                    smallTextPip.gameObject.SetActive(false);
-                }
-                
-                if(smallTextPipling != null)
-                {
-                    smallTextPipling.gameObject.SetActive(false);
-                }
-                
-            }
-            else
-            {
-                if (smallTextPip != null)
-                {
-                    smallTextPip.gameObject.SetActive(true);
-                }
-
-                if (smallTextPipling != null)
-                {
-                    smallTextPipling.gameObject.SetActive(true);
-                }
-
-                if (bigTextPip != null)
-                {
-                    bigTextPip.gameObject.SetActive(false);
-                }
-
-                if (bigTextPipling != null)
-                {
-                    bigTextPipling.gameObject.SetActive(false);
-                }
+                smallTextPip.gameObject.SetActive(false);
             }
 
+            if (bigTextPip != null)
+            {
+                bigTextPip.gameObject.SetActive(true);
+            }
+
+        }
+        else
+        {
+            if (smallTextPip != null)
+            {
+                smallTextPip.gameObject.SetActive(true);
+            }
+
+            if (bigTextPip != null)
+            {
+                bigTextPip.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private void TextPipling()
+    {
+        //Distance between two objects
+        Vector3 vecBetween = transform.position - transformPipling.position;
+
+        float distance = vecBetween.magnitude;
+
+        if (distance < range)
+        {
+            if (smallTextPipling != null)
+            {
+                smallTextPipling.gameObject.SetActive(false);
+            }
+
+            if (bigTextPipling != null)
+            {
+                bigTextPipling.gameObject.SetActive(true);
+            }
+
+        }
+        else
+        {
+            if (smallTextPipling != null)
+            {
+                smallTextPipling.gameObject.SetActive(true);
+            }
+
+            if (bigTextPipling != null)
+            {
+                bigTextPipling.gameObject.SetActive(false);
+            }
         }
     }
 }
