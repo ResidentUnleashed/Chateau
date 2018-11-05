@@ -547,15 +547,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 838d88fa18f39a9409533a7f09a246f9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 838d88fa18f39a9409533a7f09a246f9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 838d88fa18f39a9409533a7f09a246f9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 838d88fa18f39a9409533a7f09a246f9, type: 3}
       propertyPath: m_RootOrder
@@ -565,9 +565,15 @@ Prefab:
       propertyPath: m_Name
       value: land_mesh (2)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 100000, guid: 838d88fa18f39a9409533a7f09a246f9, type: 3}
       propertyPath: m_TagString
       value: Floor
+=======
+    - target: {fileID: 400000, guid: 838d88fa18f39a9409533a7f09a246f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+>>>>>>> b61c7d212f531f3f2e9fe50c955ce12ea7600a37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 838d88fa18f39a9409533a7f09a246f9, type: 3}
