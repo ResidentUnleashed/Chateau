@@ -43,6 +43,14 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            updateCheckpoint = true;
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
