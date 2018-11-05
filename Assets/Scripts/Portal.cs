@@ -11,6 +11,8 @@ public class Portal : MonoBehaviour {
     private string sceneName;
     [SerializeField]
     private Animator playerAni = null;
+    [SerializeField]
+    bool suck2 = false;
 
 
 
@@ -29,7 +31,15 @@ public class Portal : MonoBehaviour {
         {
             playerMovement.enabled = false;
 
-            playerAni.Play("Suck");
+            if(!suck2)
+            {
+                playerAni.Play("Suck");
+            }
+            else
+            {
+                playerAni.Play("Suck2");
+            }
+            
 
             timer += Time.deltaTime;
 
