@@ -13,6 +13,9 @@ ModelImporter:
     100010: rock_flat
     100012: supports
     100014: tunnel_pointy_roof
+    100016: bridge_large
+    100018: bridge_small
+    100020: bridge_small_2
     400000: bridge
     400002: castle_bottom
     400004: castle_flag_tower
@@ -21,6 +24,9 @@ ModelImporter:
     400010: rock_flat
     400012: supports
     400014: tunnel_pointy_roof
+    400016: bridge_large
+    400018: bridge_small
+    400020: bridge_small_2
     2100000: lambert90
     2100002: lambert107
     2100004: lambert111
@@ -33,6 +39,9 @@ ModelImporter:
     2300008: rock_flat
     2300010: supports
     2300012: tunnel_pointy_roof
+    2300014: bridge_large
+    2300016: bridge_small
+    2300018: bridge_small_2
     3300000: bridge
     3300002: castle_bottom
     3300004: castle_flag_tower
@@ -40,6 +49,9 @@ ModelImporter:
     3300008: rock_flat
     3300010: supports
     3300012: tunnel_pointy_roof
+    3300014: bridge_large
+    3300016: bridge_small
+    3300018: bridge_small_2
     4300000: castle_flag_tower
     4300002: tunnel_pointy_roof
     4300004: castle_bottom
@@ -47,6 +59,9 @@ ModelImporter:
     4300008: rock_flat
     4300010: bridge
     4300012: supports
+    4300014: bridge_small
+    4300016: bridge_large
+    4300018: bridge_small_2
   externalObjects: {}
   materials:
     importMaterials: 1
