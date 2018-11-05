@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: StingrayPBS1
+    second: {fileID: 2100000, guid: ec7ed441dea47944dac7a1725848ea3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: initialShadingGroup1
     second: {fileID: 2100000, guid: e8787bb80d381394aa47c533a101a7ab, type: 2}
   materials:
