@@ -317,15 +317,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4173819127640956, guid: d74ff3cc22ea8b245861ab35bae1f28c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -28.676966
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4173819127640956, guid: d74ff3cc22ea8b245861ab35bae1f28c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.62
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4173819127640956, guid: d74ff3cc22ea8b245861ab35bae1f28c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6.52573
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4173819127640956, guid: d74ff3cc22ea8b245861ab35bae1f28c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6166,7 +6166,7 @@ Prefab:
     - target: {fileID: 2300002, guid: b60471588a1fa2744b15fc2993f7a68a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8787bb80d381394aa47c533a101a7ab, type: 2}
+      objectReference: {fileID: 2100000, guid: ec7ed441dea47944dac7a1725848ea3e, type: 2}
     - target: {fileID: 100000, guid: b60471588a1fa2744b15fc2993f7a68a, type: 3}
       propertyPath: m_Name
       value: prier
