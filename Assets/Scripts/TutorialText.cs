@@ -36,8 +36,16 @@ public class TutorialText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TextPip();
-        TextPipling();
+        if(transformPipling != null)
+        {
+            TextPip();
+        }
+        
+
+        if(transformPip != null)
+        {
+            TextPipling();
+        }
     }
 
 
