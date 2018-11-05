@@ -1992,6 +1992,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flameIdle: {fileID: 1407563407}
   flameActive: {fileID: 1900844964}
+  checkpointTransform: {fileID: 1192998025}
+  checkpoint: {fileID: 1192998026}
 --- !u!1 &1193554395
 GameObject:
   m_ObjectHideFlags: 0

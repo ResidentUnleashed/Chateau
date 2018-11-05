@@ -1652,6 +1652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flameIdle: {fileID: 601410885}
   flameActive: {fileID: 601410886}
+  checkpointTransform: {fileID: 524933842}
+  checkpoint: {fileID: 524933844}
 --- !u!114 &524933844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3439,6 +3441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flameIdle: {fileID: 722562043}
   flameActive: {fileID: 722562042}
+  checkpointTransform: {fileID: 1023961168}
+  checkpoint: {fileID: 1023961170}
 --- !u!114 &1023961170
 MonoBehaviour:
   m_ObjectHideFlags: 0
