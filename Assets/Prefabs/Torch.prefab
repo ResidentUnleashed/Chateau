@@ -44,7 +44,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1115726232178108
 GameObject:
   m_ObjectHideFlags: 1
@@ -78,7 +78,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1312622066538638
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 33209557350975206}
   - component: {fileID: 23398614247533776}
   - component: {fileID: 95442532237680222}
-  - component: {fileID: 136312615450409608}
+  - component: {fileID: 65476780996726052}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -114,7 +114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4153375353122362
 Transform:
   m_ObjectHideFlags: 1
@@ -135,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312622066538638}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.352, y: 0.8, z: 11.5}
+  m_LocalPosition: {x: -3.576, y: 2.412, z: -0.656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4468858656426744}
@@ -239,6 +239,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312622066538638}
   m_Mesh: {fileID: 4300000, guid: 7a19c0254091c6f4a95cdfe36b1c8a0d, type: 3}
+--- !u!65 &65476780996726052
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312622066538638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0118119, y: 0.977812, z: 1.0118117}
+  m_Center: {x: 0, y: 0.488906, z: -0.000000059604645}
 --- !u!95 &95442532237680222
 Animator:
   serializedVersion: 3
@@ -256,19 +268,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!136 &136312615450409608
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1312622066538638}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5059059
-  m_Height: 0.977812
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.488906, z: -0.000000059604645}
 --- !u!198 &198308211801657302
 ParticleSystem:
   m_ObjectHideFlags: 1
