@@ -2366,7 +2366,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4107753546356302, guid: e64bc0d04d379974f9be4067cd1b4dc6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 4107753546356302, guid: e64bc0d04d379974f9be4067cd1b4dc6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3960,7 +3960,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!95 &1344668486 stripped
 Animator:
-  m_PrefabParentObject: {fileID: 95843190231979292, guid: b2c12c024e8dd524d875c0b31e99edab,
+  m_PrefabParentObject: {fileID: 95536060798300932, guid: b2c12c024e8dd524d875c0b31e99edab,
     type: 2}
   m_PrefabInternal: {fileID: 1344668485}
 --- !u!1 &1358943084
@@ -4873,7 +4873,7 @@ MonoBehaviour:
   maxTimeBetweenScenes: 2
   sceneName: Level 3
   playerAni: {fileID: 1344668486}
-  suck2: 0
+  suck2: 1
 --- !u!1001 &1624786051
 Prefab:
   m_ObjectHideFlags: 0

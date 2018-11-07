@@ -7004,7 +7004,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!95 &650050556 stripped
 Animator:
-  m_PrefabParentObject: {fileID: 95843190231979292, guid: b2c12c024e8dd524d875c0b31e99edab,
+  m_PrefabParentObject: {fileID: 95536060798300932, guid: b2c12c024e8dd524d875c0b31e99edab,
     type: 2}
   m_PrefabInternal: {fileID: 650050555}
 --- !u!1001 &658703862
@@ -14169,6 +14169,11 @@ Prefab:
       propertyPath: playerAni
       value: 
       objectReference: {fileID: 650050556}
+    - target: {fileID: 114062540031487522, guid: c3dc400925de4fc4aa22e7bdabb6c702,
+        type: 2}
+      propertyPath: suck2
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3dc400925de4fc4aa22e7bdabb6c702, type: 2}
   m_IsPrefabParent: 0

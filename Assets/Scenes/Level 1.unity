@@ -16084,7 +16084,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!95 &1570091945 stripped
 Animator:
-  m_PrefabParentObject: {fileID: 95843190231979292, guid: b2c12c024e8dd524d875c0b31e99edab,
+  m_PrefabParentObject: {fileID: 95536060798300932, guid: b2c12c024e8dd524d875c0b31e99edab,
     type: 2}
   m_PrefabInternal: {fileID: 1570091944}
 --- !u!1 &1570715295

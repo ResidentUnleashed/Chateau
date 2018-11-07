@@ -3881,7 +3881,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!95 &847230743 stripped
 Animator:
-  m_PrefabParentObject: {fileID: 95843190231979292, guid: b2c12c024e8dd524d875c0b31e99edab,
+  m_PrefabParentObject: {fileID: 95536060798300932, guid: b2c12c024e8dd524d875c0b31e99edab,
     type: 2}
   m_PrefabInternal: {fileID: 847230742}
 --- !u!1 &863257020
@@ -7420,7 +7420,7 @@ MonoBehaviour:
   maxTimeBetweenScenes: 1.2
   sceneName: Level 6
   playerAni: {fileID: 847230743}
-  suck2: 0
+  suck2: 1
 --- !u!4 &1628739579 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 328a6fa79ca20c24ebd777b4821832bd, type: 3}
