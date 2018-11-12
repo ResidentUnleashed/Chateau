@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.93725497, g: 0.41960788, b: 0.38823533, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -27,7 +27,7 @@ RenderSettings:
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 87dea521cb2c7a44e81dd8ca6b98781e, type: 2}
-  m_HaloStrength: 0.5
+  m_HaloStrength: 0.522
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -1183,13 +1183,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121854393}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 59.13, y: 14.12, z: 17.63}
+  m_LocalRotation: {x: 0.020074558, y: -0.7068218, z: 0.020074565, w: 0.7068218}
+  m_LocalPosition: {x: 53.06, y: 14.12, z: 17.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.2540002, y: -90.00001, z: 0}
 --- !u!114 &121854398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54681,12 +54681,12 @@ Prefab:
     - target: {fileID: 224171544308558550, guid: 710533cb995961b4fac8409c7134a6ed,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 127
+      value: 388
       objectReference: {fileID: 0}
     - target: {fileID: 224171544308558550, guid: 710533cb995961b4fac8409c7134a6ed,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -44.750977
+      value: -146
       objectReference: {fileID: 0}
     - target: {fileID: 224171544308558550, guid: 710533cb995961b4fac8409c7134a6ed,
         type: 2}
@@ -54707,6 +54707,25 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471278865454500, guid: 710533cb995961b4fac8409c7134a6ed, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224171544308558550, guid: 710533cb995961b4fac8409c7134a6ed,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3.240979
+      objectReference: {fileID: 0}
+    - target: {fileID: 224171544308558550, guid: 710533cb995961b4fac8409c7134a6ed,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3.240981
+      objectReference: {fileID: 0}
+    - target: {fileID: 224171544308558550, guid: 710533cb995961b4fac8409c7134a6ed,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 3.240981
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 710533cb995961b4fac8409c7134a6ed, type: 2}
