@@ -26,6 +26,17 @@ public class TutorialText : MonoBehaviour
     [SerializeField]
     private float range;
 
+    [SerializeField]
+    private AudioClip pipSound;
+
+    [SerializeField]
+    private AudioClip piplingSound;
+
+    [SerializeField]
+    private AudioSource audioSource;
+
+
+
     // Use this for initialization
     void Start()
     {
@@ -114,6 +125,18 @@ public class TutorialText : MonoBehaviour
             {
                 bigTextPipling.gameObject.SetActive(false);
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Pip")
+        {
+            audioSource.PlayOneShot(pipSound);
+        }
+        else if (other.tag == "Pipling")
+        {
+            audioSource.PlayOneShot(piplingSound);
         }
     }
 }
