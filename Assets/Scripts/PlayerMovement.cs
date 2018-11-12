@@ -162,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         changeForm = GetComponent<ChangeForm>();
         respawnPos = transform.position;
+        canMove = false;
     }
 
     void Update()
