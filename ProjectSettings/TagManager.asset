@@ -16,6 +16,7 @@ TagManager:
   - Lock2
   - Lock3
   - ShadowBeam
+  - Ocean
   layers:
   - Default
   - TransparentFX
