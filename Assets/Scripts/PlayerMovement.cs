@@ -36,6 +36,14 @@ public class PlayerMovement : MonoBehaviour
     private Animator pipAni = null;
     [SerializeField]
     private float drag = 3.0f;
+    [SerializeField]
+    private AudioClip pipSound;
+    [SerializeField]
+    private AudioClip fallSound;
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private float fallSoundTime = 1.0f;
     #endregion
 
     #region Private vars
@@ -58,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     private float inputX;
     private float inputY;
     private float attachTimer;
+    private float fallSoundTimer = 0.0f;
     private float rotZeroTimer = 0.0f;
     private bool onWall = false;
     private bool changeRotateDir = true;
@@ -158,6 +167,21 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         #region Small if checks
+
+        if(fallOff)
+        {
+            fallSoundTimer += Time.deltaTime;
+
+            if (fallSoundTimer > fallSoundTime)
+            {
+                audioSource.PlayOneShot(fallSound);
+            }
+        }
+        else
+        {
+            fallSoundTimer = 0.0f;
+        }
+
 
         if (onWall || onGround)
         {

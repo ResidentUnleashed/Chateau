@@ -13,6 +13,8 @@ public class Portal : MonoBehaviour {
     private Animator playerAni = null;
     [SerializeField]
     bool suck2 = false;
+    [SerializeField]
+    AudioSource portalAudioSource;
 
 
 
@@ -34,10 +36,12 @@ public class Portal : MonoBehaviour {
             if(!suck2)
             {
                 playerAni.Play("Suck");
+                portalAudioSource.PlayOneShot(portalAudioSource.clip);
             }
             else
             {
                 playerAni.Play("Suck2");
+                portalAudioSource.PlayOneShot(portalAudioSource.clip);
             }
             
 
