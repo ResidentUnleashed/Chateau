@@ -1,18 +1,17 @@
 fileFormatVersion: 2
-guid: 7cd2d5cfa4ca5374b9de70c4ab46d70e
-timeCreated: 1540877320
+guid: 21fa0c91cda5f034c9f830803cfadba8
+timeCreated: 1541988883
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Rock1:Group648
-    100002: //RootNode
-    400000: Rock1:Group648
-    400002: //RootNode
-    2100000: Rock1_Group648Mat
-    2300000: Rock1:Group648
-    3300000: Rock1:Group648
-    4300000: Rock1:Group648
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Rock3:Group49254
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -68,7 +67,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -87,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

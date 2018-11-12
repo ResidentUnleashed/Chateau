@@ -1,18 +1,17 @@
 fileFormatVersion: 2
-guid: ff923cef8c1df644f92beb5b20be69f6
-timeCreated: 1540877325
+guid: 9a576afdb9c95c348af59f73957c6773
+timeCreated: 1541988922
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Rock3:Group49254
-    100002: //RootNode
-    400000: Rock3:Group49254
-    400002: //RootNode
-    2100000: Rock3_Group49254Mat
-    2300000: Rock3:Group49254
-    3300000: Rock3:Group49254
-    4300000: Rock3:Group49254
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Rubble_02
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -68,7 +67,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -87,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
