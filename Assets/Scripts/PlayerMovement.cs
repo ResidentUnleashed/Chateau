@@ -36,6 +36,14 @@ public class PlayerMovement : MonoBehaviour
     private Animator pipAni = null;
     [SerializeField]
     private float drag = 3.0f;
+    [SerializeField]
+    private AudioClip pipSound;
+    [SerializeField]
+    private AudioClip fallSound;
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private float fallSoundTime = 1.0f;
     #endregion
 
     #region Private vars
@@ -58,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     private float inputX;
     private float inputY;
     private float attachTimer;
+    private float fallSoundTimer = 0.0f;
     private float rotZeroTimer = 0.0f;
     private bool onWall = false;
     private bool changeRotateDir = true;
@@ -153,12 +162,13 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         changeForm = GetComponent<ChangeForm>();
         respawnPos = transform.position;
+        canMove = false;
     }
 
     void Update()
     {
         #region Small if checks
-
+ 
         if (onWall || onGround)
         {
             rb.drag = drag;
@@ -374,7 +384,7 @@ public class PlayerMovement : MonoBehaviour
                     Debug.DrawRay(shadow.transform.position, shadow.transform.up, Color.blue);
                     canRotate = true;
 
-                    //If hit wall or floor, change direction to the normal of the hit objectvggw
+                    //If hit wall or floor, change direction to the normal of the hit object
                     if (objectHit.transform.tag == "Wall")
                     {
                         direction = objectHit.normal.normalized;

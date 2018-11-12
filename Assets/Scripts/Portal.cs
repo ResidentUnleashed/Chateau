@@ -13,6 +13,8 @@ public class Portal : MonoBehaviour {
     private Animator playerAni = null;
     [SerializeField]
     bool suck2 = false;
+    [SerializeField]
+    AudioSource portalAudioSource;
 
 
 
@@ -40,7 +42,6 @@ public class Portal : MonoBehaviour {
                 playerAni.Play("Suck2");
             }
             
-
             timer += Time.deltaTime;
 
             if(timer > maxTimeBetweenScenes)
@@ -55,6 +56,7 @@ public class Portal : MonoBehaviour {
     {
         if(collision.transform.tag == "Player")
         {
+            portalAudioSource.PlayOneShot(portalAudioSource.clip);
             hasHit = true;
         }
     }
