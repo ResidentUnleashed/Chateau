@@ -49,13 +49,13 @@ public class TutorialText : MonoBehaviour
     {
         if(transformPipling != null)
         {
-            TextPip();
+            TextPipling();
         }
         
 
         if(transformPip != null)
         {
-            TextPipling();
+            TextPip();
         }
     }
 
