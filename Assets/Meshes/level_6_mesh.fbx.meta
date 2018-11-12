@@ -91,6 +91,9 @@ ModelImporter:
     100166: leafs1
     100168: leafs2
     100170: real_block48
+    100172: real_block27 1
+    100174: transform1
+    100176: transform2
     400000: fake
     400002: fake_block
     400004: fake_block1
@@ -177,6 +180,9 @@ ModelImporter:
     400166: leafs1
     400168: leafs2
     400170: real_block48
+    400172: real_block27 1
+    400174: transform1
+    400176: transform2
     2100000: lambert1
     2100002: lambert2
     2100004: lambert83
