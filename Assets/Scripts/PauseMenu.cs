@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class PauseMenu : MonoBehaviour {
     private Text text2;
     [SerializeField]
     private Text text3;
+    [SerializeField]
+    private string mainMenu;
 
     private bool gameIsPaused = false;
     private int currentSelected = 0;
@@ -132,6 +135,7 @@ public class PauseMenu : MonoBehaviour {
     public void LoadMenu()
     {
         //Change to main menu scene
+        SceneManager.LoadScene(mainMenu);
     }
 
     public void Quit()
