@@ -168,22 +168,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         #region Small if checks
-
-        if(fallOff)
-        {
-            fallSoundTimer += Time.deltaTime;
-
-            if (fallSoundTimer > fallSoundTime)
-            {
-                audioSource.PlayOneShot(fallSound);
-            }
-        }
-        else
-        {
-            fallSoundTimer = 0.0f;
-        }
-
-
+ 
         if (onWall || onGround)
         {
             rb.drag = drag;
@@ -399,7 +384,7 @@ public class PlayerMovement : MonoBehaviour
                     Debug.DrawRay(shadow.transform.position, shadow.transform.up, Color.blue);
                     canRotate = true;
 
-                    //If hit wall or floor, change direction to the normal of the hit objectvggw
+                    //If hit wall or floor, change direction to the normal of the hit object
                     if (objectHit.transform.tag == "Wall")
                     {
                         direction = objectHit.normal.normalized;

@@ -36,15 +36,12 @@ public class Portal : MonoBehaviour {
             if(!suck2)
             {
                 playerAni.Play("Suck");
-                portalAudioSource.PlayOneShot(portalAudioSource.clip);
             }
             else
             {
                 playerAni.Play("Suck2");
-                portalAudioSource.PlayOneShot(portalAudioSource.clip);
             }
             
-
             timer += Time.deltaTime;
 
             if(timer > maxTimeBetweenScenes)
@@ -59,6 +56,7 @@ public class Portal : MonoBehaviour {
     {
         if(collision.transform.tag == "Player")
         {
+            portalAudioSource.PlayOneShot(portalAudioSource.clip);
             hasHit = true;
         }
     }
