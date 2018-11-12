@@ -1,21 +1,20 @@
 fileFormatVersion: 2
-guid: bf6728cb265ed944c9f7b61ce3af0cf4
-timeCreated: 1541379419
+guid: 42ff481d35cc86c4784a19861873ca32
+timeCreated: 1541999767
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Rubble_03
-    100002: //RootNode
-    400000: Rubble_03
-    400002: //RootNode
-    2100000: Rubble_03Mat
-    2300000: Rubble_03
-    3300000: Rubble_03
-    4300000: Rubble_03
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Rock1:Group648
+    9500000: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -68,7 +67,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -87,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
