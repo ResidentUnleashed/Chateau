@@ -94,6 +94,8 @@ ModelImporter:
     100172: real_block27 1
     100174: transform1
     100176: transform2
+    100178: polySurface1
+    100180: polySurface2
     400000: fake
     400002: fake_block
     400004: fake_block1
@@ -183,6 +185,8 @@ ModelImporter:
     400172: real_block27 1
     400174: transform1
     400176: transform2
+    400178: polySurface1
+    400180: polySurface2
     2100000: lambert1
     2100002: lambert2
     2100004: lambert83
@@ -255,6 +259,8 @@ ModelImporter:
     2300130: leafs1
     2300132: leafs2
     2300134: real_block48
+    2300136: polySurface1
+    2300138: polySurface2
     3300000: fake_block
     3300002: fake_block1
     3300004: fake_block10
@@ -323,6 +329,8 @@ ModelImporter:
     3300130: leafs1
     3300132: leafs2
     3300134: real_block48
+    3300136: polySurface1
+    3300138: polySurface2
     4300000: tree_block
     4300002: tree_branch
     4300004: tree_branch1
@@ -391,6 +399,8 @@ ModelImporter:
     4300130: leafs1
     4300132: leafs2
     4300134: real_block48
+    4300136: polySurface1
+    4300138: polySurface2
   externalObjects: {}
   materials:
     importMaterials: 1
