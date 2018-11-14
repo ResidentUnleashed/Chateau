@@ -29525,7 +29525,7 @@ MonoBehaviour:
   mainMenuUI: {fileID: 1666181593}
   creditsUI: {fileID: 1010668629}
   levelSelectUI: {fileID: 0}
-  levelName: 
+  levelName: '[Tutorial] 1 - Walking'
   text1: {fileID: 710341305}
   text2: {fileID: 825928974}
   text3: {fileID: 1223582249}
