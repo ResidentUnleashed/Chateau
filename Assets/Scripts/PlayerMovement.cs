@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -231,6 +232,22 @@ public class PlayerMovement : MonoBehaviour
             isDead = false;
         }
         #endregion
+        
+        if(Input.GetButtonDown("RBumper"))
+        {
+            if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
+        if(Input.GetButtonDown("LBumper"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         //Raycasting to detect wall
         DetectWalls();

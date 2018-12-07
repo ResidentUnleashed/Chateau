@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject mainMenuUI;
     [SerializeField]
+    private GameObject menuTitle;
+    [SerializeField]
     private GameObject creditsUI;
     [SerializeField]
     private GameObject levelSelectUI = null;
@@ -121,6 +123,7 @@ public class MainMenu : MonoBehaviour
         creditsUI.SetActive(false);
         //levelSelectUI.SetActive(false);
         mainMenuUI.SetActive(true);
+        menuTitle.SetActive(true);
     }
 
     public void LevelSelect()
@@ -137,5 +140,6 @@ public class MainMenu : MonoBehaviour
         mainMenuUI.SetActive(false);
         //levelSelectUI.SetActive(false);
         creditsUI.SetActive(true);
+        menuTitle.SetActive(false);
     }
 }
