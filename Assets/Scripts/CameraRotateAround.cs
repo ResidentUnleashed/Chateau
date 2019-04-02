@@ -9,6 +9,10 @@ public class CameraRotateAround : MonoBehaviour {
     [SerializeField]
     private float angle = 15.0f;
 
+	void Awake()
+	{
+		Cursor.visible = false;
+	}
 	
 	// Update is called once per frame
 	void Update ()
